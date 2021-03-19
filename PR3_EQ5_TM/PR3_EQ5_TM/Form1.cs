@@ -21,5 +21,10 @@ namespace PR3_EQ5_TM
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
