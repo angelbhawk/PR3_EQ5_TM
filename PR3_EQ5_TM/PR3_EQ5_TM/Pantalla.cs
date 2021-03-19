@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PR3_EQ5_TM.Componentes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace PR3_EQ5_TM
 {
     public partial class Pantalla : Form
     {
+        Grafica g1;
+
         public Pantalla()
         {
             InitializeComponent();
