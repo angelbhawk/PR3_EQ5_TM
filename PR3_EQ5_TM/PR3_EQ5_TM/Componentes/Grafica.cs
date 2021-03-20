@@ -30,11 +30,11 @@ namespace PR3_EQ5_TM.Componentes
         // : base(parametros pero no tiene)
         {
             Colores();
-            this.Width = 100;
+            this.Width = 150;
             this.Height = 100;
             this.Paint += new PaintEventHandler(Grafica_Paint);
             this.BackColor = colorFondo;
-            int[] valoresIniciales = { 1,2,3,4,5 };
+            int[] valoresIniciales = { 1,2,3,4,5,6,17,18,19,20, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
             numerosAleatorios = valoresIniciales;
             DibujarRectangulos();
         }
@@ -59,7 +59,7 @@ namespace PR3_EQ5_TM.Componentes
             colorSecundario = new Color();
             colorSecundario = Color.FromArgb(27, 38, 49);
             colorFondo = new Color();
-            colorFondo = Color.FromArgb(0, 0, 0);
+            colorFondo = Color.FromArgb(27, 38, 49);
         }
 
         private void DibujarRectangulos() 
@@ -68,9 +68,9 @@ namespace PR3_EQ5_TM.Componentes
             for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
             {
                 if (numRec == 0)
-                    rectangulosGraficados[numRec] = new Rectangle(2, 2, this.Width/numerosAleatorios.Length-2, this.Height / numerosAleatorios[numRec] - 4);
+                    rectangulosGraficados[numRec] = new Rectangle(0, 0, this.Width / 20 * numerosAleatorios[numRec], this.Height / numerosAleatorios.Length - 2);
                 else
-                    rectangulosGraficados[numRec] = new Rectangle(rectangulosGraficados[numRec - 1].Right + 2, 2, this.Width / numerosAleatorios.Length-2, this.Height / numerosAleatorios[numRec] - 4);
+                rectangulosGraficados[numRec] = new Rectangle(0, this.Height / 20 * numRec + 1, this.Width / 20 * numerosAleatorios[numRec], this.Height / numerosAleatorios.Length - 2);
             }
         }
 
