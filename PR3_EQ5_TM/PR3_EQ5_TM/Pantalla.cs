@@ -31,7 +31,6 @@ namespace PR3_EQ5_TM
             {
               
                 Graficas.Add(new Grafica());
-
                 switch (i)
                 {
                     case 7:

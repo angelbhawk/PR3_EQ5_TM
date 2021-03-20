@@ -55,7 +55,7 @@ namespace PR3_EQ5_TM.Componentes
         private void Colores()
         {
             colorPrimario = new Color();
-            colorPrimario = Color.FromArgb(44, 62, 80);
+            colorPrimario = Color.DarkOrange;
             colorSecundario = new Color();
             colorSecundario = Color.FromArgb(27, 38, 49);
             colorFondo = new Color();
