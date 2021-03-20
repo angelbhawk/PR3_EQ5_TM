@@ -46,7 +46,6 @@ namespace PR3_EQ5_TM.Componentes
             this.Height = ancho;
             this.Paint += new PaintEventHandler(Grafica_Paint);
             this.BackColor = Color.White;
-
             numerosAleatorios = valores;
             DibujarRectangulos();
         }
@@ -69,9 +68,9 @@ namespace PR3_EQ5_TM.Componentes
             for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
             {
                 if (numRec == 0)
-                    rectangulosGraficados[numRec] = new Rectangle(2, 2, 10, this.Height / numerosAleatorios[numRec] - 4);
+                    rectangulosGraficados[numRec] = new Rectangle(2, 2, this.Width/numerosAleatorios.Length-2, this.Height / numerosAleatorios[numRec] - 4);
                 else
-                    rectangulosGraficados[numRec] = new Rectangle(rectangulosGraficados[numRec - 1].Right + 2, 2, 10, this.Height / numerosAleatorios[numRec] - 4);
+                    rectangulosGraficados[numRec] = new Rectangle(rectangulosGraficados[numRec - 1].Right + 2, 2, this.Width / numerosAleatorios.Length-2, this.Height / numerosAleatorios[numRec] - 4);
             }
         }
 
