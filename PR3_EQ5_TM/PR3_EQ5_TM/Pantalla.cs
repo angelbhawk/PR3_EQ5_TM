@@ -95,5 +95,40 @@ namespace PR3_EQ5_TM
             #endregion
 
         }
+
+        private void btnInserción_Click(object sender, EventArgs e)
+        {
+            Graficas[0].Ordenar("Inserción Binaria");
+        }
+
+        private void btnSelecion_Click(object sender, EventArgs e)
+        {
+            Graficas[1].Ordenar("");
+        }
+
+        private void btnBurbuja_Click(object sender, EventArgs e)
+        {
+            Graficas[2].Ordenar("Burbuja Mejorada");
+        }
+
+        private void btnShell_Click(object sender, EventArgs e)
+        {
+            Graficas[3].Ordenar("Shell");
+        }
+
+        private void btnMerge_Click(object sender, EventArgs e)
+        {
+            Graficas[4].Ordenar("");
+        }
+
+        private void btnHeap_Click(object sender, EventArgs e)
+        {
+            Graficas[5].Ordenar("");
+        }
+
+        private void btnQuick_Click(object sender, EventArgs e)
+        {
+            Graficas[6].Ordenar("Quicksort");
+        }
     }
 }

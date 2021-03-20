@@ -30,13 +30,13 @@ namespace PR3_EQ5_TM
         private void InitializeComponent()
         {
             this.pnlGraficas = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnInserción = new System.Windows.Forms.Button();
+            this.btnSelecion = new System.Windows.Forms.Button();
+            this.btnBurbuja = new System.Windows.Forms.Button();
+            this.btnShell = new System.Windows.Forms.Button();
+            this.btnMerge = new System.Windows.Forms.Button();
+            this.btnHeap = new System.Windows.Forms.Button();
+            this.btnQuick = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -44,8 +44,8 @@ namespace PR3_EQ5_TM
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -62,82 +62,89 @@ namespace PR3_EQ5_TM
             this.pnlGraficas.Size = new System.Drawing.Size(1090, 425);
             this.pnlGraficas.TabIndex = 0;
             // 
-            // button1
+            // btnInserción
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(8, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "INSERCIÓN";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInserción.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserción.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnInserción.Location = new System.Drawing.Point(8, 6);
+            this.btnInserción.Name = "btnInserción";
+            this.btnInserción.Size = new System.Drawing.Size(150, 23);
+            this.btnInserción.TabIndex = 18;
+            this.btnInserción.Text = "INSERCIÓN";
+            this.btnInserción.UseVisualStyleBackColor = true;
+            this.btnInserción.Click += new System.EventHandler(this.btnInserción_Click);
             // 
-            // button2
+            // btnSelecion
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(162, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "SELECIÓN";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSelecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelecion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSelecion.Location = new System.Drawing.Point(162, 6);
+            this.btnSelecion.Name = "btnSelecion";
+            this.btnSelecion.Size = new System.Drawing.Size(150, 23);
+            this.btnSelecion.TabIndex = 4;
+            this.btnSelecion.Text = "SELECIÓN";
+            this.btnSelecion.UseVisualStyleBackColor = true;
+            this.btnSelecion.Click += new System.EventHandler(this.btnSelecion_Click);
             // 
-            // button3
+            // btnBurbuja
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(316, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "BURBUJA";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBurbuja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBurbuja.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBurbuja.Location = new System.Drawing.Point(316, 6);
+            this.btnBurbuja.Name = "btnBurbuja";
+            this.btnBurbuja.Size = new System.Drawing.Size(150, 23);
+            this.btnBurbuja.TabIndex = 6;
+            this.btnBurbuja.Text = "BURBUJA";
+            this.btnBurbuja.UseVisualStyleBackColor = true;
+            this.btnBurbuja.Click += new System.EventHandler(this.btnBurbuja_Click);
             // 
-            // button4
+            // btnShell
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Location = new System.Drawing.Point(470, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "SHELL";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnShell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShell.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnShell.Location = new System.Drawing.Point(470, 6);
+            this.btnShell.Name = "btnShell";
+            this.btnShell.Size = new System.Drawing.Size(150, 23);
+            this.btnShell.TabIndex = 7;
+            this.btnShell.Text = "SHELL";
+            this.btnShell.UseVisualStyleBackColor = true;
+            this.btnShell.Click += new System.EventHandler(this.btnShell_Click);
             // 
-            // button5
+            // btnMerge
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.Location = new System.Drawing.Point(624, 6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 23);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "MERGE";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnMerge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMerge.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMerge.Location = new System.Drawing.Point(624, 6);
+            this.btnMerge.Name = "btnMerge";
+            this.btnMerge.Size = new System.Drawing.Size(150, 23);
+            this.btnMerge.TabIndex = 8;
+            this.btnMerge.Text = "MERGE";
+            this.btnMerge.UseVisualStyleBackColor = true;
+            this.btnMerge.Click += new System.EventHandler(this.btnMerge_Click);
             // 
-            // button6
+            // btnHeap
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Location = new System.Drawing.Point(778, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 23);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "HEAP";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnHeap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHeap.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnHeap.Location = new System.Drawing.Point(778, 6);
+            this.btnHeap.Name = "btnHeap";
+            this.btnHeap.Size = new System.Drawing.Size(150, 23);
+            this.btnHeap.TabIndex = 9;
+            this.btnHeap.Text = "HEAP";
+            this.btnHeap.UseVisualStyleBackColor = true;
+            this.btnHeap.Click += new System.EventHandler(this.btnHeap_Click);
             // 
-            // button7
+            // btnQuick
             // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button7.Location = new System.Drawing.Point(932, 6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 23);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "QUICK";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnQuick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuick.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnQuick.Location = new System.Drawing.Point(932, 6);
+            this.btnQuick.Name = "btnQuick";
+            this.btnQuick.Size = new System.Drawing.Size(150, 23);
+            this.btnQuick.TabIndex = 10;
+            this.btnQuick.Text = "QUICK";
+            this.btnQuick.UseVisualStyleBackColor = true;
+            this.btnQuick.Click += new System.EventHandler(this.btnQuick_Click);
             // 
             // button8
             // 
@@ -186,13 +193,13 @@ namespace PR3_EQ5_TM
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.btnQuick);
+            this.panel1.Controls.Add(this.btnInserción);
+            this.panel1.Controls.Add(this.btnSelecion);
+            this.panel1.Controls.Add(this.btnBurbuja);
+            this.panel1.Controls.Add(this.btnShell);
+            this.panel1.Controls.Add(this.btnMerge);
+            this.panel1.Controls.Add(this.btnHeap);
             this.panel1.Location = new System.Drawing.Point(48, 8);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1090, 34);
@@ -222,6 +229,15 @@ namespace PR3_EQ5_TM
             this.panel3.Size = new System.Drawing.Size(1145, 481);
             this.panel3.TabIndex = 17;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel4.Controls.Add(this.button12);
+            this.panel4.Location = new System.Drawing.Point(8, 8);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(34, 34);
+            this.panel4.TabIndex = 17;
+            // 
             // button12
             // 
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -232,15 +248,6 @@ namespace PR3_EQ5_TM
             this.button12.TabIndex = 5;
             this.button12.Text = "T";
             this.button12.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel4.Controls.Add(this.button12);
-            this.panel4.Location = new System.Drawing.Point(8, 8);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(34, 34);
-            this.panel4.TabIndex = 17;
             // 
             // button13
             // 
@@ -273,6 +280,7 @@ namespace PR3_EQ5_TM
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.panel3);
+            this.DoubleBuffered = true;
             this.Name = "Pantalla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla";
@@ -287,13 +295,13 @@ namespace PR3_EQ5_TM
 
         #endregion
         public System.Windows.Forms.Panel pnlGraficas;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnInserción;
+        private System.Windows.Forms.Button btnSelecion;
+        private System.Windows.Forms.Button btnBurbuja;
+        private System.Windows.Forms.Button btnShell;
+        private System.Windows.Forms.Button btnMerge;
+        private System.Windows.Forms.Button btnHeap;
+        private System.Windows.Forms.Button btnQuick;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
