@@ -35,12 +35,10 @@ namespace PR3_EQ5_TM
             int Ph = (pnlGraficas.Height) / 4, Pw = (pnlGraficas.Width-10) / 7;
             int A = 0;
             int H = 0;
-            int px = 2, py = 2;
             Random Alea = new Random();
             int[] NumAlea = new int[Max2];
-            int[] NumAlea2 = { 1,14,2,20,3,4,7,5} ;
+            int[] NumAlea2 = { 1,2,8,5,4} ;
             int iA=0;
-            int Repe = 0;
             while (iA < Max2)
             {
                 NumAlea[iA] = Convert.ToInt32(Alea.Next(1, 20));
@@ -59,12 +57,9 @@ namespace PR3_EQ5_TM
                     A++;
                     H = 0;
                 }
-                g1.Add(new Grafica(Pw-10, Ph-20, NumAlea));
-                //g1[i].Px1 = Pw * H;
-                //g1[i].Py1 = Pyy;
+                g1.Add(new Grafica(Pw-10, Ph-20, NumAlea2));
                 g1[i].Location = new Point(Pw * H, 5+ Ph * A);
                 pnlGraficas.Controls.Add(g1[i]);
-                //int Pyy = py + Ph * A;
                 H++;
                 i++;
             }
