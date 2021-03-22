@@ -9,12 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Threading;
 
 
 namespace PR3_EQ5_TM
 {
+
     public partial class Pantalla : Form
     {
+
         private List<Grafica> Graficas;
 
         public Pantalla()
@@ -27,9 +30,9 @@ namespace PR3_EQ5_TM
             int x = 5, y = 5;
             Graficas = new List<Grafica>();
 
-            for (int i = 0; i < 28; i++) 
+            for (int i = 0; i < 28; i++)
             {
-              
+
                 Graficas.Add(new Grafica());
                 switch (i)
                 {
@@ -37,7 +40,7 @@ namespace PR3_EQ5_TM
                         x = 5;
                         y = Graficas[i].Height + 10;
                         Graficas[i].Left = x;
-                        Graficas[i].Top  = y;
+                        Graficas[i].Top = y;
                         break;
                     case 14:
                         x = 5;
@@ -95,10 +98,22 @@ namespace PR3_EQ5_TM
             #endregion
 
         }
-
-        private void btnInserción_Click(object sender, EventArgs e)
+        public void Inserciones()
         {
             Graficas[0].Ordenar("Inserción Binaria");
+            
+        }
+        public void Burbujas()
+        {
+            Graficas[2].Ordenar("Burbuja Mejorada");
+            //this.Refresh();
+        }
+        public void btnInserción_Click(object sender, EventArgs e)
+        {
+            Thread HiloInser = new Thread(Inserciones);
+            HiloInser.Start();
+            //this.Invoke(new MethodInvoker(Refresh));
+            //Graficas[0].Ordenar("Inserción Binaria");
         }
 
         private void btnSelecion_Click(object sender, EventArgs e)
@@ -108,7 +123,9 @@ namespace PR3_EQ5_TM
 
         private void btnBurbuja_Click(object sender, EventArgs e)
         {
-            Graficas[2].Ordenar("Burbuja Mejorada");
+            Thread HiloBurbu = new Thread(Burbujas);
+            HiloBurbu.Start();
+            //Graficas[2].Ordenar("Burbuja Mejorada");
         }
 
         private void btnShell_Click(object sender, EventArgs e)

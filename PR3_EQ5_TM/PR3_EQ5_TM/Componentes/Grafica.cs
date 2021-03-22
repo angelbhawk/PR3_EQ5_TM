@@ -50,6 +50,22 @@ namespace PR3_EQ5_TM.Componentes
            
         }
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Grafica
+            // 
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Grafica_Paint_1);
+            this.ResumeLayout(false);
+
+        }
+
+        private void Grafica_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
         public Grafica(int alto, int ancho, int[] valores)
         // : base(parametros pero no tiene) 
         {
@@ -99,7 +115,9 @@ namespace PR3_EQ5_TM.Componentes
                 rectangulosGraficados[rectanguloMenor].Location = new Point(0,(rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
                 rectangulosGraficados[rectanguloMayor].Location = new Point(0,(rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
 
-                Refresh();
+                this.Invoke(new MethodInvoker(Refresh));
+                //Refresh();
+
                 //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMenor]);
                 //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMayor]);
 
@@ -141,7 +159,8 @@ namespace PR3_EQ5_TM.Componentes
                     MessageBox.Show("Selecione un método de ordenamiento");
                     break;
             }
-            Refresh();
+            this.Invoke(new MethodInvoker(Refresh));
+            //Refresh();
         }
 
         // Métodos
