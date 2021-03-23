@@ -116,9 +116,15 @@ namespace PR3_EQ5_TM
             //Graficas[0].Ordenar("Inserción Binaria");
         }
 
+        public void Seleccion()
+        {
+            Graficas[1].Ordenar("Selección");
+        }
+
         private void btnSelecion_Click(object sender, EventArgs e)
         {
-            Graficas[1].Ordenar("");
+            Thread HiloInser = new Thread(Seleccion);
+            HiloInser.Start();
         }
 
         private void btnBurbuja_Click(object sender, EventArgs e)
@@ -128,24 +134,51 @@ namespace PR3_EQ5_TM
             //Graficas[2].Ordenar("Burbuja Mejorada");
         }
 
-        private void btnShell_Click(object sender, EventArgs e)
+        public void Shell()
         {
             Graficas[3].Ordenar("Shell");
         }
 
-        private void btnMerge_Click(object sender, EventArgs e)
+        private void btnShell_Click(object sender, EventArgs e)
         {
-            Graficas[4].Ordenar("");
+            Thread HiloBurbu = new Thread(Shell);
+            HiloBurbu.Start();
         }
 
+        public void Merge()
+        {
+            Graficas[4].Ordenar("Merge");
+        }
+        private void btnMerge_Click(object sender, EventArgs e)
+        {
+            Thread HiloBurbu = new Thread(Merge);
+            HiloBurbu.Start();
+        }
+
+        public void Heap()
+        {
+            Graficas[5].Ordenar("Heap");
+        }
         private void btnHeap_Click(object sender, EventArgs e)
         {
-            Graficas[5].Ordenar("");
+            Thread HiloBurbu = new Thread(Heap);
+            HiloBurbu.Start();
+        }
+
+        public void Quick()
+        {
+            Graficas[6].Ordenar("Quicksort");
         }
 
         private void btnQuick_Click(object sender, EventArgs e)
         {
-            Graficas[6].Ordenar("Quicksort");
+            Thread HiloBurbu = new Thread(Quick);
+            HiloBurbu.Start();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

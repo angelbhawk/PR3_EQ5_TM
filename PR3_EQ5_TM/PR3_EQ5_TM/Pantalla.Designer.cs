@@ -82,7 +82,7 @@ namespace PR3_EQ5_TM
             this.btnSelecion.Name = "btnSelecion";
             this.btnSelecion.Size = new System.Drawing.Size(150, 23);
             this.btnSelecion.TabIndex = 4;
-            this.btnSelecion.Text = "SELECIÓN";
+            this.btnSelecion.Text = "SELECCIÓN";
             this.btnSelecion.UseVisualStyleBackColor = true;
             this.btnSelecion.Click += new System.EventHandler(this.btnSelecion_Click);
             // 
@@ -270,6 +270,7 @@ namespace PR3_EQ5_TM
             this.button14.TabIndex = 19;
             this.button14.Text = "SALIR";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Pantalla
             // 
