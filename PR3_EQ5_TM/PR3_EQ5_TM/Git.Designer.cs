@@ -45,10 +45,9 @@ namespace PR3_EQ5_TM
             // 
             this.lblGit.AutoSize = true;
             this.lblGit.Font = new System.Drawing.Font("Microsoft Tai Le", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGit.Location = new System.Drawing.Point(215, 213);
-            this.lblGit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGit.Location = new System.Drawing.Point(171, 188);
             this.lblGit.Name = "lblGit";
-            this.lblGit.Size = new System.Drawing.Size(534, 103);
+            this.lblGit.Size = new System.Drawing.Size(429, 81);
             this.lblGit.TabIndex = 0;
             this.lblGit.Text = "¡Hello Github!";
             // 
@@ -57,20 +56,18 @@ namespace PR3_EQ5_TM
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblFecha.Location = new System.Drawing.Point(376, 495);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Location = new System.Drawing.Point(288, 388);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(240, 30);
+            this.lblFecha.Size = new System.Drawing.Size(186, 23);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "18 de Marzo de 2021";
             // 
             // pbxGit
             // 
             this.pbxGit.Image = ((System.Drawing.Image)(resources.GetObject("pbxGit.Image")));
-            this.pbxGit.Location = new System.Drawing.Point(449, 92);
-            this.pbxGit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxGit.Location = new System.Drawing.Point(347, 90);
             this.pbxGit.Name = "pbxGit";
-            this.pbxGit.Size = new System.Drawing.Size(100, 92);
+            this.pbxGit.Size = new System.Drawing.Size(75, 75);
             this.pbxGit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxGit.TabIndex = 3;
             this.pbxGit.TabStop = false;
@@ -78,10 +75,9 @@ namespace PR3_EQ5_TM
             // pbxSalir
             // 
             this.pbxSalir.Image = ((System.Drawing.Image)(resources.GetObject("pbxSalir.Image")));
-            this.pbxSalir.Location = new System.Drawing.Point(957, 15);
-            this.pbxSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxSalir.Location = new System.Drawing.Point(718, 12);
             this.pbxSalir.Name = "pbxSalir";
-            this.pbxSalir.Size = new System.Drawing.Size(27, 25);
+            this.pbxSalir.Size = new System.Drawing.Size(20, 20);
             this.pbxSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxSalir.TabIndex = 4;
             this.pbxSalir.TabStop = false;
@@ -92,10 +88,9 @@ namespace PR3_EQ5_TM
             this.lblAngel.AutoSize = true;
             this.lblAngel.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAngel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblAngel.Location = new System.Drawing.Point(389, 329);
-            this.lblAngel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAngel.Location = new System.Drawing.Point(125, 286);
             this.lblAngel.Name = "lblAngel";
-            this.lblAngel.Size = new System.Drawing.Size(208, 56);
+            this.lblAngel.Size = new System.Drawing.Size(166, 45);
             this.lblAngel.TabIndex = 1;
             this.lblAngel.Text = "i\'m Angel";
             // 
@@ -104,10 +99,9 @@ namespace PR3_EQ5_TM
             this.lblOsmar.AutoSize = true;
             this.lblOsmar.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOsmar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblOsmar.Location = new System.Drawing.Point(383, 384);
-            this.lblOsmar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOsmar.Location = new System.Drawing.Point(297, 286);
             this.lblOsmar.Name = "lblOsmar";
-            this.lblOsmar.Size = new System.Drawing.Size(222, 56);
+            this.lblOsmar.Size = new System.Drawing.Size(177, 45);
             this.lblOsmar.TabIndex = 5;
             this.lblOsmar.Text = "i\'m Osmar";
             // 
@@ -116,20 +110,19 @@ namespace PR3_EQ5_TM
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(389, 439);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(480, 286);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 56);
+            this.label1.Size = new System.Drawing.Size(145, 45);
             this.label1.TabIndex = 6;
             this.label1.Text = "i\'m Alan";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Git
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 615);
+            this.ClientSize = new System.Drawing.Size(750, 500);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblOsmar);
             this.Controls.Add(this.pbxSalir);
@@ -138,7 +131,6 @@ namespace PR3_EQ5_TM
             this.Controls.Add(this.lblAngel);
             this.Controls.Add(this.lblGit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Git";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbxGit)).EndInit();

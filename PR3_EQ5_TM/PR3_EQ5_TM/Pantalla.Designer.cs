@@ -45,7 +45,7 @@ namespace PR3_EQ5_TM
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnAll = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -232,22 +232,23 @@ namespace PR3_EQ5_TM
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel4.Controls.Add(this.button12);
+            this.panel4.Controls.Add(this.btnAll);
             this.panel4.Location = new System.Drawing.Point(8, 8);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(34, 34);
             this.panel4.TabIndex = 17;
             // 
-            // button12
+            // btnAll
             // 
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button12.Location = new System.Drawing.Point(6, 6);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(23, 23);
-            this.button12.TabIndex = 5;
-            this.button12.Text = "T";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAll.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAll.Location = new System.Drawing.Point(6, 6);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(23, 23);
+            this.btnAll.TabIndex = 5;
+            this.btnAll.Text = "T";
+            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // button13
             // 
@@ -309,7 +310,7 @@ namespace PR3_EQ5_TM
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnAll;
         public System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;

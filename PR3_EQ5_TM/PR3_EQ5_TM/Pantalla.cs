@@ -101,12 +101,32 @@ namespace PR3_EQ5_TM
         public void Inserciones()
         {
             Graficas[0].Ordenar("Inserción Binaria");
-            
+            Graficas[7].Ordenar("Inserción Binaria");
+            Graficas[14].Ordenar("Inserción Binaria");
+            Graficas[21].Ordenar("Inserción Binaria");
         }
         public void Burbujas()
         {
             Graficas[2].Ordenar("Burbuja Mejorada");
+            Graficas[9].Ordenar("Burbuja Mejorada");
+            Graficas[16].Ordenar("Burbuja Mejorada");
+            Graficas[23].Ordenar("Burbuja Mejorada");
             //this.Refresh();
+        }
+        public void Shells()
+        {
+            Graficas[3].Ordenar("Shell");
+            Graficas[10].Ordenar("Shell");
+            Graficas[17].Ordenar("Shell");
+            Graficas[24].Ordenar("Shell");
+            //this.Refresh();
+        }
+        public void Quicks() 
+        {
+            Graficas[6].Ordenar("Quicksort");
+            Graficas[13].Ordenar("Quicksort");
+            Graficas[20].Ordenar("Quicksort");
+            Graficas[27].Ordenar("Quicksort");
         }
         public void btnInserción_Click(object sender, EventArgs e)
         {
@@ -146,6 +166,21 @@ namespace PR3_EQ5_TM
         private void btnQuick_Click(object sender, EventArgs e)
         {
             Graficas[6].Ordenar("Quicksort");
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            Thread HiloBurbu = new Thread(Burbujas);
+            HiloBurbu.Start();
+
+            Thread HiloInser = new Thread(Inserciones);
+            HiloInser.Start();
+
+            Thread HiloShells = new Thread(Shells);
+            HiloShells.Start();
+
+            Thread HiloQuicks = new Thread(Quicks);
+            HiloQuicks.Start();
         }
     }
 }
