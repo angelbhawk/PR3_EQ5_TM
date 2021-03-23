@@ -105,6 +105,13 @@ namespace PR3_EQ5_TM
             Graficas[14].Ordenar("Inserción Binaria");
             Graficas[21].Ordenar("Inserción Binaria");
         }
+        public void Selecciones()
+        {
+            Graficas[1].Ordenar("Selección");
+            Graficas[8].Ordenar("Selección");
+            Graficas[15].Ordenar("Selección");
+            Graficas[22].Ordenar("Selección");
+        }
         public void Burbujas()
         {
             Graficas[2].Ordenar("Burbuja Mejorada");
@@ -128,59 +135,93 @@ namespace PR3_EQ5_TM
             Graficas[20].Ordenar("Quicksort");
             Graficas[27].Ordenar("Quicksort");
         }
+
+        public void Merges()
+        {
+            Graficas[4].Ordenar("Merge");
+            Graficas[11].Ordenar("Merge");
+            Graficas[18].Ordenar("Merge");
+            Graficas[25].Ordenar("Merge");
+        }
+        public void Heaps()
+        {
+            Graficas[5].Ordenar("Heap");
+            Graficas[12].Ordenar("Heap");
+            Graficas[19].Ordenar("Heap");
+            Graficas[26].Ordenar("Heap");
+        }
+
+        //
+
         public void btnInserción_Click(object sender, EventArgs e)
         {
             Thread HiloInser = new Thread(Inserciones);
             HiloInser.Start();
-            //this.Invoke(new MethodInvoker(Refresh));
-            //Graficas[0].Ordenar("Inserción Binaria");
         }
 
         private void btnSelecion_Click(object sender, EventArgs e)
         {
-            Graficas[1].Ordenar("");
+            Thread HiloSelec = new Thread(Selecciones);
+            HiloSelec.Start();
         }
 
         private void btnBurbuja_Click(object sender, EventArgs e)
         {
             Thread HiloBurbu = new Thread(Burbujas);
             HiloBurbu.Start();
-            //Graficas[2].Ordenar("Burbuja Mejorada");
         }
 
         private void btnShell_Click(object sender, EventArgs e)
         {
-            Graficas[3].Ordenar("Shell");
+            Thread HiloShells = new Thread(Shells);
+            HiloShells.Start();
         }
 
         private void btnMerge_Click(object sender, EventArgs e)
         {
-            Graficas[4].Ordenar("");
+            Thread HiloMerges = new Thread(Merges);
+            HiloMerges.Start();
         }
 
         private void btnHeap_Click(object sender, EventArgs e)
         {
-            Graficas[5].Ordenar("");
+            Thread HiloHeaps = new Thread(Heaps);
+            HiloHeaps.Start();
         }
 
         private void btnQuick_Click(object sender, EventArgs e)
         {
-            Graficas[6].Ordenar("Quicksort");
+            Thread HiloQuicks = new Thread(Quicks);
+            HiloQuicks.Start();
         }
 
         private void btnAll_Click(object sender, EventArgs e)
         {
+            Thread HiloHeap = new Thread(Heaps);
+            HiloHeap.Start();
+
+            Thread HiloMerges = new Thread(Merges);
+            HiloMerges.Start();
+
             Thread HiloBurbu = new Thread(Burbujas);
             HiloBurbu.Start();
 
             Thread HiloInser = new Thread(Inserciones);
             HiloInser.Start();
 
+            Thread HiloSelec = new Thread(Selecciones);
+            HiloSelec.Start();
+
             Thread HiloShells = new Thread(Shells);
             HiloShells.Start();
 
             Thread HiloQuicks = new Thread(Quicks);
             HiloQuicks.Start();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
