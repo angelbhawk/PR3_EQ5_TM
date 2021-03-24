@@ -153,10 +153,10 @@ namespace PR3_EQ5_TM
             Color color = new Color();
             ColorDialog color2 = new ColorDialog();
             if (color2.ShowDialog() == DialogResult.OK)
-                color = color2.Color;
-            for(int i=0; i < 28;i++)
             {
-                Graficas[i].CambioColor("Principal", color);
+                color = color2.Color;
+                for (int i = 0; i < 28; i++)
+                    Graficas[i].CambioColor("Principal", color);
             }
             Refresh();
         }
@@ -165,11 +165,11 @@ namespace PR3_EQ5_TM
             Color color = new Color();
             ColorDialog color2 = new ColorDialog();
             if (color2.ShowDialog() == DialogResult.OK)
-                color = color2.Color;
-            for (int i = 0; i < 28; i++)
             {
-                Graficas[i].CambioColor("Secundario", color);
-            }
+                color = color2.Color;
+                for (int i = 0; i < 28; i++)
+                    Graficas[i].CambioColor("Secundario", color);
+            }    
             Refresh();
         }
         private void btnFondo_Click(object sender, EventArgs e)
@@ -177,10 +177,10 @@ namespace PR3_EQ5_TM
             Color color = new Color();
             ColorDialog color2 = new ColorDialog();
             if (color2.ShowDialog() == DialogResult.OK)
-                color = color2.Color;
-            for (int i = 0; i < 28; i++)
             {
-                Graficas[i].BackColor = color;
+                color = color2.Color;
+                for (int i = 0; i < 28; i++)
+                    Graficas[i].BackColor = color;
             }
             Refresh();
         }
