@@ -47,7 +47,7 @@ namespace PR3_EQ5_TM.Componentes
             numerosAleatorios = valoresIniciales;
             this.Refresh();
             DibujarRectangulos();
-           
+
         }
 
         private void InitializeComponent()
@@ -81,15 +81,32 @@ namespace PR3_EQ5_TM.Componentes
 
         private void Colores()
         {
-            colorPrimario = new Color();
-            colorPrimario = Color.DarkOrange;
-            colorSecundario = new Color();
-            colorSecundario = Color.FromArgb(0, 255, 151);
-            colorFondo = new Color();
-            colorFondo = Color.FromArgb(27, 38, 49);
+            if(colorPrimario.IsEmpty && colorSecundario.IsEmpty)
+            {
+                colorPrimario = new Color();
+                colorPrimario = Color.DarkOrange;
+                colorSecundario = new Color();
+                colorSecundario = Color.FromArgb(0, 255, 151);
+                colorFondo = new Color();
+                colorFondo = Color.FromArgb(27, 38, 49);
+            }
+            else if(!colorPrimario.IsEmpty && colorSecundario.IsEmpty)
+            {
+                colorPrimario = new Color();
+                colorPrimario = Color.DarkOrange;
+                colorFondo = new Color();
+                colorFondo = Color.FromArgb(27, 38, 49);
+            }
+            else if(colorPrimario.IsEmpty && !colorSecundario.IsEmpty)
+            {
+                colorSecundario = new Color();
+                colorSecundario = Color.FromArgb(0, 255, 151);
+                colorFondo = new Color();
+                colorFondo = Color.FromArgb(27, 38, 49);
+            }
         }
 
-        private void DibujarRectangulos() 
+        private void DibujarRectangulos()
         {
             rectangulosGraficados = new Rectangle[numerosAleatorios.Length]; // Crea el arreglo de rectangulos
             for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
@@ -97,7 +114,7 @@ namespace PR3_EQ5_TM.Componentes
                 if (numRec == 0)
                     rectangulosGraficados[numRec] = new Rectangle(0, this.Height / max * numRec + 1, this.Width / max * numerosAleatorios[numRec], this.Height / numerosAleatorios.Length - 2);
                 else
-                rectangulosGraficados[numRec] = new Rectangle(0, this.Height / max * numRec + 1, this.Width / max * numerosAleatorios[numRec], this.Height / numerosAleatorios.Length - 2);
+                    rectangulosGraficados[numRec] = new Rectangle(0, this.Height / max * numRec + 1, this.Width / max * numerosAleatorios[numRec], this.Height / numerosAleatorios.Length - 2);
             }
         }
 
@@ -105,15 +122,15 @@ namespace PR3_EQ5_TM.Componentes
         {
             rectanguloMenor = k;
             rectanguloMayor = w;
-            int distancia = rectangulosGraficados[rectanguloMayor].Top -rectangulosGraficados[rectanguloMayor].Top;
-            int yk = rectangulosGraficados[rectanguloMenor].Top, 
+            int distancia = rectangulosGraficados[rectanguloMayor].Top - rectangulosGraficados[rectanguloMayor].Top;
+            int yk = rectangulosGraficados[rectanguloMenor].Top,
                 yw = rectangulosGraficados[rectanguloMayor].Top;
 
             while (rectangulosGraficados[rectanguloMenor].Top < yw)
             {
-                
-                rectangulosGraficados[rectanguloMenor].Location = new Point(0,(rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
-                rectangulosGraficados[rectanguloMayor].Location = new Point(0,(rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
+
+                rectangulosGraficados[rectanguloMenor].Location = new Point(0, (rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
+                rectangulosGraficados[rectanguloMayor].Location = new Point(0, (rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
 
                 this.Invoke(new MethodInvoker(Refresh));
                 //Refresh();
@@ -134,7 +151,7 @@ namespace PR3_EQ5_TM.Componentes
 
         // Ordenación
 
-        public void Ordenar(string métodoSelecionado) 
+        public void Ordenar(string métodoSelecionado)
         {
             switch (métodoSelecionado)
             {
@@ -341,5 +358,21 @@ namespace PR3_EQ5_TM.Componentes
                 g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMayor]);
             }
         }
+        #region Metodos
+        public void CambioColor(string cambio, Color color)
+        {
+            switch(cambio)
+            {
+                case "Principal":
+                    colorPrimario = new Color();
+                    colorPrimario = color;
+                    break;
+                case "Secundario":
+                    colorSecundario = new Color();
+                    colorSecundario = color;
+                    break;
+            }
+        }
+        #endregion
     }
 }

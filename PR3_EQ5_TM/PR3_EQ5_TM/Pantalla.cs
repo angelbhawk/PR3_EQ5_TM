@@ -147,5 +147,42 @@ namespace PR3_EQ5_TM
         {
             Graficas[6].Ordenar("Quicksort");
         }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            Color color = new Color();
+            ColorDialog color2 = new ColorDialog();
+            if (color2.ShowDialog() == DialogResult.OK)
+                color = color2.Color;
+            for(int i=0; i < 28;i++)
+            {
+                Graficas[i].CambioColor("Principal", color);
+            }
+            Refresh();
+        }
+        private void btnSecundario_Click(object sender, EventArgs e)
+        {
+            Color color = new Color();
+            ColorDialog color2 = new ColorDialog();
+            if (color2.ShowDialog() == DialogResult.OK)
+                color = color2.Color;
+            for (int i = 0; i < 28; i++)
+            {
+                Graficas[i].CambioColor("Secundario", color);
+            }
+            Refresh();
+        }
+        private void btnFondo_Click(object sender, EventArgs e)
+        {
+            Color color = new Color();
+            ColorDialog color2 = new ColorDialog();
+            if (color2.ShowDialog() == DialogResult.OK)
+                color = color2.Color;
+            for (int i = 0; i < 28; i++)
+            {
+                Graficas[i].BackColor = color;
+            }
+            Refresh();
+        }
     }
 }
