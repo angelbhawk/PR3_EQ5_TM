@@ -131,6 +131,7 @@ namespace PR3_EQ5_TM.Componentes
             rectanguloMayor = -1;
         } // Anima xd
 
+
         // Ordenación
 
         public void Ordenar(string métodoSelecionado) 
