@@ -14,7 +14,7 @@ namespace PR3_EQ5_TM.Componentes
         // Variables globales
 
         private int[] numerosAleatorios; // Guarda los numerosAleatorios generados aleatoriamente
-        private Rectangle[] rectangulosGraficados; // Grafica los numerosAleatorios del arreglo
+        private RectangleF[] rectangulosGraficados; // Grafica los numerosAleatorios del arreglo
         private int aux, avx, ba, bb, bc, bd, be, rectanguloMenor = -1, rectanguloMayor = -1, max;
         private double pv;
         private bool band;
@@ -126,13 +126,24 @@ namespace PR3_EQ5_TM.Componentes
 
         private void DibujarRectangulos()
         {
-            rectangulosGraficados = new Rectangle[numerosAleatorios.Length]; // Crea el arreglo de rectangulos
+            rectangulosGraficados = new RectangleF[numerosAleatorios.Length]; // Crea el arreglo de rectangulos
+            float Gros;
+            float Py;
+            //for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
+            //{
+            //    if (numRec == 0)
+            //        rectangulosGraficados[numRec] = new Rectangle(0, ((this.Height) / max * (numRec)), this.Width / max * numerosAleatorios[numRec], (this.Height) / (numerosAleatorios.Length)-1);
+            //    else
+            //        rectangulosGraficados[numRec] = new Rectangle(0, ((this.Height) / max * (numRec)), this.Width / max * numerosAleatorios[numRec], (this.Height) /(numerosAleatorios.Length)-1);
+            //}
             for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
             {
+                Py =  (this.Height / max * numRec);
+                Gros = ((this.Height / numerosAleatorios.Length)-1);
                 if (numRec == 0)
-                    rectangulosGraficados[numRec] = new Rectangle(0, (this.Height / max * (numRec + 1))-2, this.Width / max * numerosAleatorios[numRec], (this.Height) / (numerosAleatorios.Length+2));
+                    rectangulosGraficados[numRec] = new RectangleF(0,Convert.ToSingle(Py), this.Width / max * numerosAleatorios[numRec], Convert.ToSingle(Gros));
                 else
-                    rectangulosGraficados[numRec] = new Rectangle(0, (this.Height / max * (numRec + 1))-2, this.Width / max * numerosAleatorios[numRec], (this.Height) /(numerosAleatorios.Length+2));
+                    rectangulosGraficados[numRec] = new RectangleF(0, Convert.ToSingle(Py), this.Width / max * numerosAleatorios[numRec], Convert.ToSingle(Gros));
             }
         }
 
@@ -140,15 +151,15 @@ namespace PR3_EQ5_TM.Componentes
         {
             rectanguloMenor = k;
             rectanguloMayor = w;
-            int distancia = rectangulosGraficados[rectanguloMayor].Top - rectangulosGraficados[rectanguloMayor].Top;
-            int yk = rectangulosGraficados[rectanguloMenor].Top,
+            float distancia = rectangulosGraficados[rectanguloMayor].Top - rectangulosGraficados[rectanguloMayor].Top;
+            float yk = rectangulosGraficados[rectanguloMenor].Top,
                 yw = rectangulosGraficados[rectanguloMayor].Top;
 
             while (rectangulosGraficados[rectanguloMenor].Top < yw)
             {
 
-                rectangulosGraficados[rectanguloMenor].Location = new Point(0, (rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
-                rectangulosGraficados[rectanguloMayor].Location = new Point(0, (rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
+                rectangulosGraficados[rectanguloMenor].Location = new PointF(0, (rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
+                rectangulosGraficados[rectanguloMayor].Location = new PointF(0, (rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
 
                 this.Invoke(new MethodInvoker(Refresh));
 

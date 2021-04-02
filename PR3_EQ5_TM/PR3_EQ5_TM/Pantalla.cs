@@ -42,14 +42,13 @@ namespace PR3_EQ5_TM
         public void DibujarPaneles()
         {
             //Inicios();
-            //MessageBox.Show(Rand[4].ToString());
             int x = 5, y = 5;
             int a = 0;
             Graficas = new List<Grafica>();
             for (int i = 0; i < 28; i++)
             {
 
-                Graficas.Add(new Grafica());
+                Graficas.Add(new Grafica(Tam));
 
                 switch (i)
                 {
@@ -217,15 +216,15 @@ namespace PR3_EQ5_TM
 
         private void button13_Click(object sender, EventArgs e)
         {
-            //Tam = Convert.ToInt32(NudTam.Value);
-            //DibujarPaneles();
+            Tam = Convert.ToInt32(NudTam.Value);
+            DibujarPaneles();
             //int i = 0;
             //while (i<26)
             //{
             //    Graficas[i].Refresh();
             //    i++;
             //}
-            //this.Refresh();
+            this.Refresh();
         }
     }
 }

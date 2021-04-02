@@ -298,6 +298,11 @@ namespace PR3_EQ5_TM
             // NudTam
             // 
             this.NudTam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(185)))), ((int)(((byte)(205)))));
+            this.NudTam.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.NudTam.Location = new System.Drawing.Point(956, 12);
             this.NudTam.Maximum = new decimal(new int[] {
             50,
@@ -305,7 +310,7 @@ namespace PR3_EQ5_TM
             0,
             0});
             this.NudTam.Minimum = new decimal(new int[] {
-            30,
+            20,
             0,
             0,
             0});
@@ -313,7 +318,7 @@ namespace PR3_EQ5_TM
             this.NudTam.Size = new System.Drawing.Size(120, 22);
             this.NudTam.TabIndex = 20;
             this.NudTam.Value = new decimal(new int[] {
-            30,
+            35,
             0,
             0,
             0});
