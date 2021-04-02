@@ -130,9 +130,9 @@ namespace PR3_EQ5_TM.Componentes
             for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
             {
                 if (numRec == 0)
-                    rectangulosGraficados[numRec] = new Rectangle(0, this.Height / max * (numRec + 1), this.Width / max * numerosAleatorios[numRec], this.Height / (numerosAleatorios.Length +2));
+                    rectangulosGraficados[numRec] = new Rectangle(0, (this.Height / max * (numRec + 1))-2, this.Width / max * numerosAleatorios[numRec], (this.Height) / (numerosAleatorios.Length+2));
                 else
-                    rectangulosGraficados[numRec] = new Rectangle(0, this.Height / max * (numRec + 1), this.Width / max * numerosAleatorios[numRec], this.Height /(numerosAleatorios.Length + 2));
+                    rectangulosGraficados[numRec] = new Rectangle(0, (this.Height / max * (numRec + 1))-2, this.Width / max * numerosAleatorios[numRec], (this.Height) /(numerosAleatorios.Length+2));
             }
         }
 
