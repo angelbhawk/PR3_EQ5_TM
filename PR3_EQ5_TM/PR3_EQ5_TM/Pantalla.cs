@@ -24,16 +24,33 @@ namespace PR3_EQ5_TM
         {
             InitializeComponent();
         }
-
-        private void Pantalla_Load(object sender, EventArgs e)
+        int Tam;
+        int[] Rand;
+        public void Inicios()
         {
+            Random Alea = new Random();
+            int Num;
+            int i = 0;
+            Rand = new int[Tam];
+            while (i<Tam)
+            {
+                Num = Alea.Next(1, 30);
+                Rand[i] = Num;
+                i++;
+            }
+        }
+        public void DibujarPaneles()
+        {
+            //Inicios();
+            //MessageBox.Show(Rand[4].ToString());
             int x = 5, y = 5;
+            int a = 0;
             Graficas = new List<Grafica>();
-
             for (int i = 0; i < 28; i++)
             {
 
                 Graficas.Add(new Grafica());
+
                 switch (i)
                 {
                     case 7:
@@ -41,6 +58,7 @@ namespace PR3_EQ5_TM
                         y = Graficas[i].Height + 10;
                         Graficas[i].Left = x;
                         Graficas[i].Top = y;
+                        
                         break;
                     case 14:
                         x = 5;
@@ -59,11 +77,16 @@ namespace PR3_EQ5_TM
                         Graficas[i].Left = x;
                         break;
                 }
-
+                a++;
                 x += Graficas[i].Width + 5;
                 pnlGraficas.Controls.Add(Graficas[i]);
             }
 
+        }
+        private void Pantalla_Load(object sender, EventArgs e)
+        {
+            Tam = Convert.ToInt32(NudTam.Value);
+            DibujarPaneles();
 
         }
         public void Inserciones()
@@ -190,6 +213,19 @@ namespace PR3_EQ5_TM
         private void button14_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            //Tam = Convert.ToInt32(NudTam.Value);
+            //DibujarPaneles();
+            //int i = 0;
+            //while (i<26)
+            //{
+            //    Graficas[i].Refresh();
+            //    i++;
+            //}
+            //this.Refresh();
         }
     }
 }
