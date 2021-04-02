@@ -184,5 +184,18 @@ namespace PR3_EQ5_TM
             }
             Refresh();
         }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            Graficas.Clear();
+            Random r = new Random();
+            int num = 0;
+            int[] valores = new int[(int)nudCantidad.Value];
+            for(int i=0; i<valores.Length;i++)
+            {
+                num = r.Next(1, 30);
+                valores[i] = num;
+            }
+        }
     }
 }
