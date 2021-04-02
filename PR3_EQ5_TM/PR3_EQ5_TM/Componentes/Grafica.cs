@@ -49,6 +49,25 @@ namespace PR3_EQ5_TM.Componentes
             DibujarRectangulos();
 
         }
+        public Grafica(int rand)
+        // : base(parametros pero no tiene)
+        {
+            Colores();
+            this.DoubleBuffered = true;
+            this.Width = 150;
+            this.Height = 100;
+            this.Paint += new PaintEventHandler(Grafica_Paint);
+            this.BackColor = colorFondo;
+            //this.DoubleBuffered = true;
+
+            int[] valoresIniciales = { 13, 11, 9, 5, 29, 23, 17, 21, 15, 3, 20, 3, 13, 23, 15, 30, 11, 16, 6, 29, 9, 11, 21, 11, 9, 17, 19, 7, 23, 15, 12, 13, 16 };
+
+            max = valoresIniciales.Length;
+            numerosAleatorios = valoresIniciales;
+            this.Refresh();
+            DibujarRectangulos();
+
+        }
 
         private void InitializeComponent()
         {
@@ -116,7 +135,6 @@ namespace PR3_EQ5_TM.Componentes
                 rectangulosGraficados[rectanguloMayor].Location = new Point(0, (rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
 
                 this.Invoke(new MethodInvoker(Refresh));
-                //Refresh();
 
                 //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMenor]);
                 //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMayor]);
