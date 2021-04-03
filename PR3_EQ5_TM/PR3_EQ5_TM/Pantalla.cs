@@ -63,40 +63,6 @@ namespace PR3_EQ5_TM
                 x += Graficas[i].Width + 5;
                 pnlGraficas.Controls.Add(Graficas[i]);
             }
-
-            #region version de Alan
-            //int i = 0;
-            //int Max = 28;
-            //int Max2 = 5;
-            //g1 = new List<Grafica>(Max);
-            //int Ph = (pnlGraficas.Height) / 4, Pw = (pnlGraficas.Width-10) / 7;
-            //int A = 0;
-            //int H = 0;
-            //Random Alea = new Random();
-            //int[] NumAlea = new int[Max2];
-            //int[] NumAlea2 = { 1,2,8,5,4} ;
-            //int iA=0;
-            //while (iA < Max2)
-            //{
-            //    NumAlea[iA] = Convert.ToInt32(Alea.Next(1, 20));
-            //    iA++;
-            //}
-
-            //while (i < Max)
-            //{
-            //    if (i==7 || i==14 || i==21)
-            //    {
-            //        A++;
-            //        H = 0;
-            //    }
-            //    g1.Add(new Grafica(Pw-10, Ph-20, NumAlea2));
-            //    g1[i].Location = new Point(Pw * H, 5+ Ph * A);
-            //    pnlGraficas.Controls.Add(g1[i]);
-            //    H++;
-            //    i++;
-            //}
-            #endregion
-
         }
         public void Inserciones()
         {
@@ -266,57 +232,7 @@ namespace PR3_EQ5_TM
             Graficas.Clear();
             Random r = new Random();
             int num = 0;
-            int[] valores = new int[(int)nudCantidad.Value];
-            for(int i=0; i<valores.Length;i++)
-            {
-                num = r.Next(1, 30);
-                valores[i] = num;
-            }
-        }
-
-        private void btnPrincipal_Click(object sender, EventArgs e)
-        {
-            Color color = new Color();
-            ColorDialog color2 = new ColorDialog();
-            if (color2.ShowDialog() == DialogResult.OK)
-            {
-                color = color2.Color;
-                for (int i = 0; i < 28; i++)
-                    Graficas[i].CambioColor("Principal", color);
-            }
-            Refresh();
-        }
-        private void btnSecundario_Click(object sender, EventArgs e)
-        {
-            Color color = new Color();
-            ColorDialog color2 = new ColorDialog();
-            if (color2.ShowDialog() == DialogResult.OK)
-            {
-                color = color2.Color;
-                for (int i = 0; i < 28; i++)
-                    Graficas[i].CambioColor("Secundario", color);
-            }    
-            Refresh();
-        }
-        private void btnFondo_Click(object sender, EventArgs e)
-        {
-            Color color = new Color();
-            ColorDialog color2 = new ColorDialog();
-            if (color2.ShowDialog() == DialogResult.OK)
-            {
-                color = color2.Color;
-                for (int i = 0; i < 28; i++)
-                    Graficas[i].BackColor = color;
-            }
-            Refresh();
-        }
-
-        private void btnGenerar_Click(object sender, EventArgs e)
-        {
-            Graficas.Clear();
-            Random r = new Random();
-            int num = 0;
-            int[] valores = new int[(int)nudCantidad.Value];
+            int[] valores = new int[30];//(int)nudCantidad.Value];
             for(int i=0; i<valores.Length;i++)
             {
                 num = r.Next(1, 30);
