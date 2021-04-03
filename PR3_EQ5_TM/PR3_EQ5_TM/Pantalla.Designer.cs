@@ -60,7 +60,7 @@ namespace PR3_EQ5_TM
             // 
             this.pnlGraficas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.pnlGraficas.Location = new System.Drawing.Point(64, 59);
-            this.pnlGraficas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlGraficas.Margin = new System.Windows.Forms.Padding(4);
             this.pnlGraficas.Name = "pnlGraficas";
             this.pnlGraficas.Size = new System.Drawing.Size(1453, 523);
             this.pnlGraficas.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace PR3_EQ5_TM
             this.btnInserción.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserción.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnInserción.Location = new System.Drawing.Point(11, 7);
-            this.btnInserción.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInserción.Margin = new System.Windows.Forms.Padding(4);
             this.btnInserción.Name = "btnInserción";
             this.btnInserción.Size = new System.Drawing.Size(200, 28);
             this.btnInserción.TabIndex = 18;
@@ -83,7 +83,7 @@ namespace PR3_EQ5_TM
             this.btnSelecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelecion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSelecion.Location = new System.Drawing.Point(216, 7);
-            this.btnSelecion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelecion.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelecion.Name = "btnSelecion";
             this.btnSelecion.Size = new System.Drawing.Size(200, 28);
             this.btnSelecion.TabIndex = 4;
@@ -96,7 +96,7 @@ namespace PR3_EQ5_TM
             this.btnBurbuja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBurbuja.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBurbuja.Location = new System.Drawing.Point(421, 7);
-            this.btnBurbuja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBurbuja.Margin = new System.Windows.Forms.Padding(4);
             this.btnBurbuja.Name = "btnBurbuja";
             this.btnBurbuja.Size = new System.Drawing.Size(200, 28);
             this.btnBurbuja.TabIndex = 6;
@@ -109,7 +109,7 @@ namespace PR3_EQ5_TM
             this.btnShell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShell.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnShell.Location = new System.Drawing.Point(627, 7);
-            this.btnShell.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShell.Margin = new System.Windows.Forms.Padding(4);
             this.btnShell.Name = "btnShell";
             this.btnShell.Size = new System.Drawing.Size(200, 28);
             this.btnShell.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace PR3_EQ5_TM
             this.btnMerge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMerge.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnMerge.Location = new System.Drawing.Point(832, 7);
-            this.btnMerge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMerge.Margin = new System.Windows.Forms.Padding(4);
             this.btnMerge.Name = "btnMerge";
             this.btnMerge.Size = new System.Drawing.Size(200, 28);
             this.btnMerge.TabIndex = 8;
@@ -135,7 +135,7 @@ namespace PR3_EQ5_TM
             this.btnHeap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeap.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnHeap.Location = new System.Drawing.Point(1037, 7);
-            this.btnHeap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHeap.Margin = new System.Windows.Forms.Padding(4);
             this.btnHeap.Name = "btnHeap";
             this.btnHeap.Size = new System.Drawing.Size(200, 28);
             this.btnHeap.TabIndex = 9;
@@ -148,7 +148,7 @@ namespace PR3_EQ5_TM
             this.btnQuick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuick.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnQuick.Location = new System.Drawing.Point(1243, 7);
-            this.btnQuick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuick.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuick.Name = "btnQuick";
             this.btnQuick.Size = new System.Drawing.Size(200, 28);
             this.btnQuick.TabIndex = 10;
@@ -161,7 +161,7 @@ namespace PR3_EQ5_TM
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button8.Location = new System.Drawing.Point(8, 28);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(31, 111);
             this.button8.TabIndex = 11;
@@ -173,7 +173,7 @@ namespace PR3_EQ5_TM
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button9.Location = new System.Drawing.Point(8, 146);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(31, 111);
             this.button9.TabIndex = 12;
@@ -185,7 +185,7 @@ namespace PR3_EQ5_TM
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button10.Location = new System.Drawing.Point(8, 265);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(31, 111);
             this.button10.TabIndex = 13;
@@ -197,7 +197,7 @@ namespace PR3_EQ5_TM
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button11.Location = new System.Drawing.Point(8, 383);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(31, 111);
             this.button11.TabIndex = 14;
@@ -215,7 +215,7 @@ namespace PR3_EQ5_TM
             this.panel1.Controls.Add(this.btnMerge);
             this.panel1.Controls.Add(this.btnHeap);
             this.panel1.Location = new System.Drawing.Point(64, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1453, 42);
             this.panel1.TabIndex = 15;
@@ -228,7 +228,7 @@ namespace PR3_EQ5_TM
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button10);
             this.panel2.Location = new System.Drawing.Point(11, 59);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(45, 523);
             this.panel2.TabIndex = 16;
@@ -241,7 +241,7 @@ namespace PR3_EQ5_TM
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 38);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1527, 592);
             this.panel3.TabIndex = 17;
@@ -251,7 +251,7 @@ namespace PR3_EQ5_TM
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.panel4.Controls.Add(this.btnAll);
             this.panel4.Location = new System.Drawing.Point(11, 10);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(45, 42);
             this.panel4.TabIndex = 17;
@@ -261,7 +261,7 @@ namespace PR3_EQ5_TM
             this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAll.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAll.Location = new System.Drawing.Point(8, 7);
-            this.btnAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(31, 28);
             this.btnAll.TabIndex = 5;
@@ -274,7 +274,7 @@ namespace PR3_EQ5_TM
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Location = new System.Drawing.Point(1099, 12);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button13.Margin = new System.Windows.Forms.Padding(4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(200, 28);
             this.button13.TabIndex = 18;
@@ -287,7 +287,7 @@ namespace PR3_EQ5_TM
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.White;
             this.button14.Location = new System.Drawing.Point(1307, 12);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button14.Margin = new System.Windows.Forms.Padding(4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(200, 28);
             this.button14.TabIndex = 19;
@@ -310,7 +310,7 @@ namespace PR3_EQ5_TM
             0,
             0});
             this.NudTam.Minimum = new decimal(new int[] {
-            20,
+            5,
             0,
             0,
             0});
@@ -318,7 +318,7 @@ namespace PR3_EQ5_TM
             this.NudTam.Size = new System.Drawing.Size(120, 22);
             this.NudTam.TabIndex = 20;
             this.NudTam.Value = new decimal(new int[] {
-            35,
+            20,
             0,
             0,
             0});
@@ -334,7 +334,7 @@ namespace PR3_EQ5_TM
             this.Controls.Add(this.button13);
             this.Controls.Add(this.panel3);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Pantalla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla";

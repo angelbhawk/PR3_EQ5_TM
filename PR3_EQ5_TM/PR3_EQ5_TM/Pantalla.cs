@@ -52,7 +52,7 @@ namespace PR3_EQ5_TM
             {
                 ArrUni = Inverso;
             }
-
+            //MessageBox.Show(ArrUni[0].ToString());
             return ArrUni;
 
         }
@@ -62,10 +62,11 @@ namespace PR3_EQ5_TM
             int a = 0;
             Graficas = new List<Grafica>();
             //int[] ArregloUni=new int[28];
-            
+            Generadores();
             for (int i = 0; i < 28; i++)
             {
-                Graficas.Add(new Grafica(Generadores()));
+                Graficas.Add(new Grafica(ArrUni));
+                //MessageBox.Show(ArrUni[0].ToString());
 
                 switch (i)
                 {
