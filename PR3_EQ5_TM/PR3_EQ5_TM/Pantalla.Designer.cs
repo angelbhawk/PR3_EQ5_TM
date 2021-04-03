@@ -45,10 +45,26 @@ namespace PR3_EQ5_TM
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnFondo = new System.Windows.Forms.Button();
+            this.btnSecundario = new System.Windows.Forms.Button();
+            this.btnPrincipal = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlGraficas
@@ -79,7 +95,7 @@ namespace PR3_EQ5_TM
             this.btnSelecion.Name = "btnSelecion";
             this.btnSelecion.Size = new System.Drawing.Size(150, 23);
             this.btnSelecion.TabIndex = 4;
-            this.btnSelecion.Text = "SELECCIÓN";
+            this.btnSelecion.Text = "SELECIÓN";
             this.btnSelecion.UseVisualStyleBackColor = true;
             this.btnSelecion.Click += new System.EventHandler(this.btnSelecion_Click);
             // 
@@ -229,45 +245,167 @@ namespace PR3_EQ5_TM
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel4.Controls.Add(this.btnAll);
+            this.panel4.Controls.Add(this.button12);
             this.panel4.Location = new System.Drawing.Point(8, 8);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(34, 34);
             this.panel4.TabIndex = 17;
             // 
-            // btnAll
+            // button12
             // 
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button12.Location = new System.Drawing.Point(6, 6);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(23, 23);
+            this.button12.TabIndex = 5;
+            this.button12.Text = "T";
+            this.button12.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
-
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(163, 481);
+            this.panel5.TabIndex = 18;
             // 
             // panel7
             // 
-
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel7.Controls.Add(this.btnFondo);
+            this.panel7.Controls.Add(this.btnSecundario);
+            this.panel7.Controls.Add(this.btnPrincipal);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Location = new System.Drawing.Point(5, 258);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(151, 145);
+            this.panel7.TabIndex = 1;
             // 
             // btnFondo
             // 
-        
+            this.btnFondo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFondo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnFondo.Location = new System.Drawing.Point(14, 103);
+            this.btnFondo.Name = "btnFondo";
+            this.btnFondo.Size = new System.Drawing.Size(124, 23);
+            this.btnFondo.TabIndex = 21;
+            this.btnFondo.Text = "Fondo";
+            this.btnFondo.UseVisualStyleBackColor = true;
+            this.btnFondo.Click += new System.EventHandler(this.btnFondo_Click);
             // 
             // btnSecundario
             // 
-            
+            this.btnSecundario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSecundario.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSecundario.Location = new System.Drawing.Point(14, 74);
+            this.btnSecundario.Name = "btnSecundario";
+            this.btnSecundario.Size = new System.Drawing.Size(124, 23);
+            this.btnSecundario.TabIndex = 20;
+            this.btnSecundario.Text = "Secundario";
+            this.btnSecundario.UseVisualStyleBackColor = true;
+            this.btnSecundario.Click += new System.EventHandler(this.btnSecundario_Click);
             // 
             // btnPrincipal
             // 
-            
+            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrincipal.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPrincipal.Location = new System.Drawing.Point(14, 45);
+            this.btnPrincipal.Name = "btnPrincipal";
+            this.btnPrincipal.Size = new System.Drawing.Size(124, 23);
+            this.btnPrincipal.TabIndex = 19;
+            this.btnPrincipal.Text = "Principal";
+            this.btnPrincipal.UseVisualStyleBackColor = true;
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
+            // 
             // label3
             // 
-          
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label3.Location = new System.Drawing.Point(10, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 15);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "DISEÑO.";
+            // 
             // panel6
             // 
-            
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel6.Controls.Add(this.btnGenerar);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.nudCantidad);
+            this.panel6.Location = new System.Drawing.Point(5, 78);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(151, 122);
+            this.panel6.TabIndex = 0;
             // 
             // btnGenerar
             // 
-      
-
+            this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGenerar.Location = new System.Drawing.Point(23, 90);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(102, 23);
+            this.btnGenerar.TabIndex = 20;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.Location = new System.Drawing.Point(7, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "DATOS.";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Location = new System.Drawing.Point(21, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Numero de datos";
+            // 
+            // nudCantidad
+            // 
+            this.nudCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.nudCantidad.ForeColor = System.Drawing.Color.Transparent;
+            this.nudCantidad.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudCantidad.Location = new System.Drawing.Point(15, 53);
+            this.nudCantidad.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nudCantidad.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(124, 20);
+            this.nudCantidad.TabIndex = 0;
+            this.nudCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudCantidad.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // Pantalla
             // 
@@ -286,10 +424,12 @@ namespace PR3_EQ5_TM
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-
-
-
-
+            this.panel5.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,7 +450,7 @@ namespace PR3_EQ5_TM
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnAll;
+        private System.Windows.Forms.Button button12;
         public System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
