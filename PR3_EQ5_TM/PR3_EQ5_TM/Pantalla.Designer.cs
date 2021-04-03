@@ -45,9 +45,6 @@ namespace PR3_EQ5_TM
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAll = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -223,10 +220,10 @@ namespace PR3_EQ5_TM
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.pnlGraficas);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 31);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(163, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1145, 481);
+            this.panel3.Size = new System.Drawing.Size(1147, 481);
             this.panel3.TabIndex = 17;
             // 
             // panel4
@@ -240,48 +237,46 @@ namespace PR3_EQ5_TM
             // 
             // btnAll
             // 
-            this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAll.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAll.Location = new System.Drawing.Point(6, 6);
-            this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(23, 23);
-            this.btnAll.TabIndex = 5;
-            this.btnAll.Text = "T";
-            this.btnAll.UseVisualStyleBackColor = true;
-            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
-            // button13
+            // panel5
             // 
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(824, 10);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(150, 23);
-            this.button13.TabIndex = 18;
-            this.button13.Text = "GENERAR";
-            this.button13.UseVisualStyleBackColor = true;
+
             // 
-            // button14
+            // panel7
             // 
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(980, 10);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(150, 23);
-            this.button14.TabIndex = 19;
-            this.button14.Text = "SALIR";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+
+            // 
+            // btnFondo
+            // 
+        
+            // 
+            // btnSecundario
+            // 
+            
+            // 
+            // btnPrincipal
+            // 
+            
+            // label3
+            // 
+          
+            // panel6
+            // 
+            
+            // 
+            // btnGenerar
+            // 
+      
+
             // 
             // Pantalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1145, 512);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
+            this.ClientSize = new System.Drawing.Size(1310, 481);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel5);
             this.DoubleBuffered = true;
             this.Name = "Pantalla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -291,6 +286,10 @@ namespace PR3_EQ5_TM
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+
+
+
+
             this.ResumeLayout(false);
 
         }
@@ -313,7 +312,16 @@ namespace PR3_EQ5_TM
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnAll;
         public System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnSecundario;
+        private System.Windows.Forms.Button btnPrincipal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown nudCantidad;
+        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.Button btnFondo;
     }
 }

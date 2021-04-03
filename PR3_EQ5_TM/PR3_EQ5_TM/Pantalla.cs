@@ -223,5 +223,55 @@ namespace PR3_EQ5_TM
         {
             Application.Exit();
         }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            Color color = new Color();
+            ColorDialog color2 = new ColorDialog();
+            if (color2.ShowDialog() == DialogResult.OK)
+            {
+                color = color2.Color;
+                for (int i = 0; i < 28; i++)
+                    Graficas[i].CambioColor("Principal", color);
+            }
+            Refresh();
+        }
+        private void btnSecundario_Click(object sender, EventArgs e)
+        {
+            Color color = new Color();
+            ColorDialog color2 = new ColorDialog();
+            if (color2.ShowDialog() == DialogResult.OK)
+            {
+                color = color2.Color;
+                for (int i = 0; i < 28; i++)
+                    Graficas[i].CambioColor("Secundario", color);
+            }    
+            Refresh();
+        }
+        private void btnFondo_Click(object sender, EventArgs e)
+        {
+            Color color = new Color();
+            ColorDialog color2 = new ColorDialog();
+            if (color2.ShowDialog() == DialogResult.OK)
+            {
+                color = color2.Color;
+                for (int i = 0; i < 28; i++)
+                    Graficas[i].BackColor = color;
+            }
+            Refresh();
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            Graficas.Clear();
+            Random r = new Random();
+            int num = 0;
+            int[] valores = new int[(int)nudCantidad.Value];
+            for(int i=0; i<valores.Length;i++)
+            {
+                num = r.Next(1, 30);
+                valores[i] = num;
+            }
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace PR3_EQ5_TM.Componentes
             this.Paint += new PaintEventHandler(Grafica_Paint);
             this.BackColor = colorFondo;
             //this.DoubleBuffered = true;
-
+            
             // 10 int[] valoresIniciales = { 10, 4, 8, 9, 1, 1, 10, 9, 7, 9 };
             // 20 int[] valoresIniciales = { 18, 2, 5, 20, 4, 1, 20, 19, 12, 2, 9, 15, 9, 3, 7, 9, 4, 20, 16, 5 };
             // 30 int[] valoresIniciales = { 13, 11, 9, 5, 29, 23, 17, 21, 15, 3, 20, 3, 13, 23, 15, 30, 11, 16, 6, 29, 9, 11, 21, 11, 9, 17, 19, 7, 23, 15, 12, 13, 16 };
@@ -66,14 +66,18 @@ namespace PR3_EQ5_TM.Componentes
 
         }
 
-        public Grafica(int alto, int ancho, int[] valores)
+        public Grafica(int[] valores)
         // : base(parametros pero no tiene) 
         {
-            this.Width = alto;
-            this.Height = ancho;
+            Colores();
+            this.DoubleBuffered = true;
+            this.Width = 150;
+            this.Height = 100;
             this.Paint += new PaintEventHandler(Grafica_Paint);
-            this.BackColor = Color.White;
+            this.BackColor = colorFondo;
             numerosAleatorios = valores;
+            max = valores.Length;
+            this.Refresh();
             DibujarRectangulos();
         }
 
@@ -81,12 +85,29 @@ namespace PR3_EQ5_TM.Componentes
 
         private void Colores()
         {
-            colorPrimario = new Color();
-            colorPrimario = Color.DarkOrange;
-            colorSecundario = new Color();
-            colorSecundario = Color.FromArgb(0, 255, 151);
-            colorFondo = new Color();
-            colorFondo = Color.FromArgb(27, 38, 49);
+            if(colorPrimario.IsEmpty && colorSecundario.IsEmpty)
+            {
+                colorPrimario = new Color();
+                colorPrimario = Color.DarkOrange;
+                colorSecundario = new Color();
+                colorSecundario = Color.FromArgb(0, 255, 151);
+                colorFondo = new Color();
+                colorFondo = Color.FromArgb(27, 38, 49);
+            }
+            else if(!colorPrimario.IsEmpty && colorSecundario.IsEmpty)
+            {
+                colorPrimario = new Color();
+                colorPrimario = Color.DarkOrange;
+                colorFondo = new Color();
+                colorFondo = Color.FromArgb(27, 38, 49);
+            }
+            else if(colorPrimario.IsEmpty && !colorSecundario.IsEmpty)
+            {
+                colorSecundario = new Color();
+                colorSecundario = Color.FromArgb(0, 255, 151);
+                colorFondo = new Color();
+                colorFondo = Color.FromArgb(27, 38, 49);
+            }
         }
 
         private void DibujarRectangulos()
@@ -131,6 +152,22 @@ namespace PR3_EQ5_TM.Componentes
             rectanguloMayor = -1;
         } // Anima xd
 
+        #region Metodos de grafiacion
+        public void CambioColor(string cambio, Color color)
+        {
+            switch (cambio)
+            {
+                case "Principal":
+                    colorPrimario = new Color();
+                    colorPrimario = color;
+                    break;
+                case "Secundario":
+                    colorSecundario = new Color();
+                    colorSecundario = color;
+                    break;
+            }
+        }
+        #endregion
 
         // Ordenación
 
