@@ -49,7 +49,27 @@ namespace PR3_EQ5_TM.Componentes
             DibujarRectangulos();
 
         }
-        public Grafica(int tam)
+        //public Grafica(int tam)
+        //{
+        //    Colores();
+        //    this.DoubleBuffered = true;
+        //    this.Width = 150;
+        //    this.Height = 100;
+        //    this.Paint += new PaintEventHandler(Grafica_Paint);
+        //    this.BackColor = colorFondo;
+        //    //this.DoubleBuffered = true;
+
+        //    //int[] valoresIniciales;
+
+
+        //    max = tam;
+        //    //numerosAleatorios = valoresIniciales;
+        //    Inicios(tam);
+        //    this.Refresh();
+        //    DibujarRectangulos();
+
+        //}
+        public Grafica(int[] ArregloUni)
         {
             Colores();
             this.DoubleBuffered = true;
@@ -59,32 +79,28 @@ namespace PR3_EQ5_TM.Componentes
             this.BackColor = colorFondo;
             //this.DoubleBuffered = true;
 
-            //int[] valoresIniciales;
-            
-
-            max = tam;
-            //numerosAleatorios = valoresIniciales;
-            Inicios(tam);
+            max = ArregloUni.Length;
+            numerosAleatorios = ArregloUni;
             this.Refresh();
             DibujarRectangulos();
 
         }
-        public void Inicios(int tam)
-        {
-            int Tam=tam;
-            int[] Rand;
-            Random Alea = new Random();
-            int Num;
-            int i = 0;
-            Rand = new int[Tam];
-            while (i < Tam)
-            {
-                Num = Alea.Next(1, 30);
-                Rand[i] = Num;
-                i++;
-            }
-            numerosAleatorios = Rand;
-        }
+        //public void Inicios(int tam)
+        //{
+        //    int Tam=tam;
+        //    int[] Rand;
+        //    Random Alea = new Random();
+        //    int Num;
+        //    int i = 0;
+        //    Rand = new int[Tam];
+        //    while (i < Tam)
+        //    {
+        //        Num = Alea.Next(1, 30);
+        //        Rand[i] = Num;
+        //        i++;
+        //    }
+        //    numerosAleatorios = Rand;
+        //}
         private void InitializeComponent()
         {
             this.SuspendLayout();

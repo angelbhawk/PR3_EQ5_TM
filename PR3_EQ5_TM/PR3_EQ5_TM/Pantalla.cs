@@ -25,30 +25,47 @@ namespace PR3_EQ5_TM
             InitializeComponent();
         }
         int Tam;
-        int[] Rand;
-        public void Inicios()
+        //int[] Rand;
+        int[] ArrUni;
+        public int[] Generadores()
         {
+            int[] Rand;
+            int[] Inverso=new int[Tam];
             Random Alea = new Random();
             int Num;
             int i = 0;
             Rand = new int[Tam];
-            while (i<Tam)
+            int a = Graficas.Count;
+            while (i < Tam)
             {
                 Num = Alea.Next(1, 30);
                 Rand[i] = Num;
                 i++;
             }
+            Inverso = Rand;
+
+            if (a <= 7)
+            {
+                ArrUni = Rand;
+            }
+            if (a <= 14 && a > 7)
+            {
+                ArrUni = Inverso;
+            }
+
+            return ArrUni;
+
         }
         public void DibujarPaneles()
         {
-            //Inicios();
             int x = 5, y = 5;
             int a = 0;
             Graficas = new List<Grafica>();
+            //int[] ArregloUni=new int[28];
+            
             for (int i = 0; i < 28; i++)
             {
-
-                Graficas.Add(new Grafica(Tam));
+                Graficas.Add(new Grafica(Generadores()));
 
                 switch (i)
                 {
@@ -217,14 +234,15 @@ namespace PR3_EQ5_TM
         private void button13_Click(object sender, EventArgs e)
         {
             Tam = Convert.ToInt32(NudTam.Value);
-            DibujarPaneles();
+            pnlGraficas.Controls.Clear();
             //int i = 0;
-            //while (i<26)
+            //while (i < 26)
             //{
-            //    Graficas[i].Refresh();
+                
             //    i++;
             //}
-            this.Refresh();
+            
+            DibujarPaneles();
         }
     }
 }
