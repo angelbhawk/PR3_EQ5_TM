@@ -47,7 +47,7 @@ namespace PR3_EQ5_TM.Componentes
             numerosAleatorios = valoresIniciales;
             this.Refresh();
             DibujarRectangulos();
-           
+
         }
 
         private void InitializeComponent()
@@ -89,7 +89,7 @@ namespace PR3_EQ5_TM.Componentes
             colorFondo = Color.FromArgb(27, 38, 49);
         }
 
-        private void DibujarRectangulos() 
+        private void DibujarRectangulos()
         {
             rectangulosGraficados = new Rectangle[numerosAleatorios.Length]; // Crea el arreglo de rectangulos
             for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
@@ -97,7 +97,7 @@ namespace PR3_EQ5_TM.Componentes
                 if (numRec == 0)
                     rectangulosGraficados[numRec] = new Rectangle(0, this.Height / max * numRec + 1, this.Width / max * numerosAleatorios[numRec], this.Height / numerosAleatorios.Length - 2);
                 else
-                rectangulosGraficados[numRec] = new Rectangle(0, this.Height / max * numRec + 1, this.Width / max * numerosAleatorios[numRec], this.Height / numerosAleatorios.Length - 2);
+                    rectangulosGraficados[numRec] = new Rectangle(0, this.Height / max * numRec + 1, this.Width / max * numerosAleatorios[numRec], this.Height / numerosAleatorios.Length - 2);
             }
         }
 
@@ -105,15 +105,15 @@ namespace PR3_EQ5_TM.Componentes
         {
             rectanguloMenor = k;
             rectanguloMayor = w;
-            int distancia = rectangulosGraficados[rectanguloMayor].Top -rectangulosGraficados[rectanguloMayor].Top;
-            int yk = rectangulosGraficados[rectanguloMenor].Top, 
+            int distancia = rectangulosGraficados[rectanguloMayor].Top - rectangulosGraficados[rectanguloMayor].Top;
+            int yk = rectangulosGraficados[rectanguloMenor].Top,
                 yw = rectangulosGraficados[rectanguloMayor].Top;
 
             while (rectangulosGraficados[rectanguloMenor].Top < yw)
             {
-                
-                rectangulosGraficados[rectanguloMenor].Location = new Point(0,(rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
-                rectangulosGraficados[rectanguloMayor].Location = new Point(0,(rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
+
+                rectangulosGraficados[rectanguloMenor].Location = new Point(0, (rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
+                rectangulosGraficados[rectanguloMayor].Location = new Point(0, (rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
 
                 this.Invoke(new MethodInvoker(Refresh));
                 //Refresh();
@@ -134,7 +134,7 @@ namespace PR3_EQ5_TM.Componentes
 
         // Ordenación
 
-        public void Ordenar(string métodoSelecionado) 
+        public void Ordenar(string métodoSelecionado)
         {
             switch (métodoSelecionado)
             {
@@ -155,6 +155,15 @@ namespace PR3_EQ5_TM.Componentes
                     break;
                 case "Inserción Binaria":
                     Binario();
+                    break;
+                case "Selección":
+                    Seleccion();
+                    break;
+                case "Merge":
+                    Merge(numerosAleatorios, 0, numerosAleatorios.Length-1);
+                    break;
+                case "Heap":
+                    Heap(numerosAleatorios);
                     break;
                 default:
                     MessageBox.Show("Selecione un método de ordenamiento");
@@ -318,7 +327,137 @@ namespace PR3_EQ5_TM.Componentes
                 DibujarRectangulos();
             }
         }               // Inserción binaria // Sí
+        //Seleccion
+        public void Seleccion()
+        {
+            int min, i, j, auxiliar;
+            int nums = numerosAleatorios.Length;
+            for (i = 0; i < nums - 1; i++)
+            {
+                min = i;
+                for (j = i + 1; j < nums; j++)
+                {
+                    if (numerosAleatorios[j] < numerosAleatorios[min])
+                        min = j;
+                }
+                auxiliar = numerosAleatorios[i];
+                numerosAleatorios[i] = numerosAleatorios[min];
+                numerosAleatorios[min] = auxiliar;
+                Animacion(i, numerosAleatorios[min]);
+                DibujarRectangulos();
+            }
+        }
+        //Merge
+        public void Merge(int[] x, int desde, int hasta)
+        {
+            //Condicion de parada
+            if (desde == hasta)
+                return;
+            //Calculo la mitad del array
+            int mitad = (desde + hasta) / 2;
+            //Voy a ordenar recursivamente la primera mitad
+            //y luego la segunda
+            Merge(x, desde, mitad);
+            Merge(x, mitad + 1, hasta);
+            //Mezclo las dos mitades ordenadas
+            int[] aux = MergeSort(x, desde, mitad, mitad + 1, hasta);
+            Array.Copy(aux, 0, x, desde, aux.Length);
+            for (int i = 0; i < numerosAleatorios.Length; i++)
+            {
+                Animacion(i, numerosAleatorios[i]);
+                DibujarRectangulos();
+            }
+        }
+        public int[] MergeSort(int[] x, int desde1, int hasta1, int desde2, int hasta2)
+        {
+            int a = desde1;
+            int b = desde2;
+            int[] result = new int[hasta1 - desde1 + hasta2 - desde2 + 2];
 
+            for (int i = 0; i < result.Length; i++)
+            {
+                if (b != x.Length)
+                {
+                    if (a > hasta1 && b <= hasta2)
+                    {
+                        result[i] = x[b];
+                        b++;
+                    }
+                    if (b > hasta2 && a <= hasta1)
+                    {
+                        result[i] = x[a];
+                        a++;
+                    }
+                    if (a <= hasta1 && b <= hasta2)
+                    {
+                        if (x[b] <= x[a])
+                        {
+                            result[i] = x[b];
+                            b++;
+                        }
+                        else
+                        {
+                            result[i] = x[a];
+                            a++;
+                        }
+                    }
+                }
+                else
+                {
+                    if (a <= hasta1)
+                    {
+                        result[i] = x[a];
+                        a++;
+                    }
+                }
+            }
+            return result;
+        }
+        //Heap
+        public void Heap(int[] array)
+        {
+            int tamanioArray = array.Length;
+            for (int p = (tamanioArray - 1) / 2; p >= 0; p--)
+                Maximos(array, tamanioArray, p);
+
+            for (int i = array.Length - 1; i > 0; i--)
+            {
+                int temp = array[i];
+                array[i] = array[0];
+                array[0] = temp;
+
+                tamanioArray--;
+                Maximos(array, tamanioArray, 0);
+                for (int k = 0; k < numerosAleatorios.Length; k++)
+                {
+                    Animacion(k, numerosAleatorios[k]);
+                    DibujarRectangulos();
+                }
+            }
+        }
+        public void Maximos(int[] array, int tamanyo, int posicion)
+        {
+            int izquierda = (posicion + 1) * 2 - 1;
+            int derecha = (posicion + 1) * 2;
+            int mayor = 0;
+
+            if (izquierda < tamanyo && array[izquierda] > array[posicion])
+                mayor = izquierda;
+            else
+                mayor = posicion;
+
+            if (derecha < tamanyo && array[derecha] > array[mayor])
+                mayor = derecha;
+
+            if (mayor != posicion)
+            {
+                int temp = array[posicion];
+                array[posicion] = array[mayor];
+                array[mayor] = temp;
+
+                Maximos(array, tamanyo, mayor);
+            }
+        }
         #endregion
 
         // Eventos
