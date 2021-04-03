@@ -107,7 +107,7 @@ namespace PR3_EQ5_TM.Componentes
 
             //metodos donde los arreglos agarran el arreglo aleatorio principal y se modifican paraa que den lugar a las generaciones de numeros aleatorios alternas
             Inverso = Rand;
-            MetInverso(Inverso);
+            //MetInverso(Inverso);
 
             //if que definen cual generación de numeros aleatorios toca
             if (iterador <= 7)
