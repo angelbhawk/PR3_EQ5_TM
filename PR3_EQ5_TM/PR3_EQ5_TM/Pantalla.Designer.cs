@@ -47,30 +47,30 @@ namespace PR3_EQ5_TM
             this.panel4 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnGenerar = new System.Windows.Forms.Button();
-            this.btnPrincipal = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlColorFondo = new System.Windows.Forms.Panel();
+            this.btnColorFondo = new System.Windows.Forms.Button();
+            this.PnlColorSecundario = new System.Windows.Forms.Panel();
+            this.btnColorSecundario = new System.Windows.Forms.Button();
+            this.pnlColorPrincipal = new System.Windows.Forms.Panel();
+            this.btnColorPrincipal = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlGraficas
@@ -92,7 +92,6 @@ namespace PR3_EQ5_TM
             this.btnInserción.TabIndex = 18;
             this.btnInserción.Text = "INSERCIÓN";
             this.btnInserción.UseVisualStyleBackColor = true;
-            this.btnInserción.Click += new System.EventHandler(this.btnInserción_Click);
             // 
             // btnSelecion
             // 
@@ -104,7 +103,6 @@ namespace PR3_EQ5_TM
             this.btnSelecion.TabIndex = 4;
             this.btnSelecion.Text = "SELECIÓN";
             this.btnSelecion.UseVisualStyleBackColor = true;
-            this.btnSelecion.Click += new System.EventHandler(this.btnSelecion_Click);
             // 
             // btnBurbuja
             // 
@@ -116,7 +114,6 @@ namespace PR3_EQ5_TM
             this.btnBurbuja.TabIndex = 6;
             this.btnBurbuja.Text = "BURBUJA";
             this.btnBurbuja.UseVisualStyleBackColor = true;
-            this.btnBurbuja.Click += new System.EventHandler(this.btnBurbuja_Click);
             // 
             // btnShell
             // 
@@ -128,7 +125,6 @@ namespace PR3_EQ5_TM
             this.btnShell.TabIndex = 7;
             this.btnShell.Text = "SHELL";
             this.btnShell.UseVisualStyleBackColor = true;
-            this.btnShell.Click += new System.EventHandler(this.btnShell_Click);
             // 
             // btnMerge
             // 
@@ -140,7 +136,6 @@ namespace PR3_EQ5_TM
             this.btnMerge.TabIndex = 8;
             this.btnMerge.Text = "MERGE";
             this.btnMerge.UseVisualStyleBackColor = true;
-            this.btnMerge.Click += new System.EventHandler(this.btnMerge_Click);
             // 
             // btnHeap
             // 
@@ -152,7 +147,6 @@ namespace PR3_EQ5_TM
             this.btnHeap.TabIndex = 9;
             this.btnHeap.Text = "HEAP";
             this.btnHeap.UseVisualStyleBackColor = true;
-            this.btnHeap.Click += new System.EventHandler(this.btnHeap_Click);
             // 
             // btnQuick
             // 
@@ -164,7 +158,6 @@ namespace PR3_EQ5_TM
             this.btnQuick.TabIndex = 10;
             this.btnQuick.Text = "QUICK";
             this.btnQuick.UseVisualStyleBackColor = true;
-            this.btnQuick.Click += new System.EventHandler(this.btnQuick_Click);
             // 
             // button8
             // 
@@ -278,92 +271,26 @@ namespace PR3_EQ5_TM
             this.panel5.Size = new System.Drawing.Size(1147, 88);
             this.panel5.TabIndex = 18;
             // 
-            // panel6
+            // panel11
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel6.Controls.Add(this.panel9);
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.panel8);
-            this.panel6.Controls.Add(this.button1);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.btnPrincipal);
-            this.panel6.Location = new System.Drawing.Point(48, 8);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(473, 38);
-            this.panel6.TabIndex = 0;
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel11.Controls.Add(this.btnCerrar);
+            this.panel11.Location = new System.Drawing.Point(880, 7);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(258, 35);
+            this.panel11.TabIndex = 22;
             // 
-            // btnGenerar
+            // btnCerrar
             // 
-            this.btnGenerar.BackColor = System.Drawing.Color.White;
-            this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btnGenerar.Location = new System.Drawing.Point(188, 8);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(150, 23);
-            this.btnGenerar.TabIndex = 20;
-            this.btnGenerar.Text = "GENERAR";
-            this.btnGenerar.UseVisualStyleBackColor = false;
-            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
-            // 
-            // btnPrincipal
-            // 
-            this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPrincipal.Location = new System.Drawing.Point(7, 8);
-            this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(150, 23);
-            this.btnPrincipal.TabIndex = 23;
-            this.btnPrincipal.Text = "                   PRINCIPAL";
-            this.btnPrincipal.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel7.Location = new System.Drawing.Point(11, 12);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(52, 15);
-            this.panel7.TabIndex = 26;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(151)))));
-            this.panel8.Location = new System.Drawing.Point(165, 12);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(52, 15);
-            this.panel8.TabIndex = 28;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(161, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "                   SECUNDARIO";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.panel9.Location = new System.Drawing.Point(319, 12);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(52, 15);
-            this.panel9.TabIndex = 30;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(315, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 23);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "                   FONDO";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCerrar.Location = new System.Drawing.Point(7, 7);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(245, 23);
+            this.btnCerrar.TabIndex = 20;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.UseVisualStyleBackColor = false;
             // 
             // panel10
             // 
@@ -374,34 +301,34 @@ namespace PR3_EQ5_TM
             this.panel10.Controls.Add(this.button4);
             this.panel10.Controls.Add(this.button3);
             this.panel10.Controls.Add(this.btnGenerar);
-            this.panel10.Location = new System.Drawing.Point(527, 8);
+            this.panel10.Location = new System.Drawing.Point(527, 7);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(347, 38);
             this.panel10.TabIndex = 21;
             // 
-            // button3
+            // button7
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(8, 8);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "10";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button7.Location = new System.Drawing.Point(152, 8);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(30, 23);
+            this.button7.TabIndex = 24;
+            this.button7.Text = "50";
+            this.button7.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // button6
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Location = new System.Drawing.Point(44, 8);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 23);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "20";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button6.Location = new System.Drawing.Point(116, 8);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 23);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "40";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -415,50 +342,115 @@ namespace PR3_EQ5_TM
             this.button5.Text = "30";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // button4
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Location = new System.Drawing.Point(116, 8);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(30, 23);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "10";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.Location = new System.Drawing.Point(44, 8);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(30, 23);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "20";
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // button3
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button7.Location = new System.Drawing.Point(152, 8);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 23);
-            this.button7.TabIndex = 24;
-            this.button7.Text = "10";
-            this.button7.UseVisualStyleBackColor = false;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.Location = new System.Drawing.Point(8, 8);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(30, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "10";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // panel11
+            // btnGenerar
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel11.Controls.Add(this.button18);
-            this.panel11.Location = new System.Drawing.Point(880, 8);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(258, 35);
-            this.panel11.TabIndex = 22;
+            this.btnGenerar.BackColor = System.Drawing.Color.White;
+            this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnGenerar.Location = new System.Drawing.Point(188, 8);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(150, 23);
+            this.btnGenerar.TabIndex = 20;
+            this.btnGenerar.Text = "GENERAR";
+            this.btnGenerar.UseVisualStyleBackColor = false;
             // 
-            // button18
+            // panel6
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button18.Location = new System.Drawing.Point(7, 7);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(245, 23);
-            this.button18.TabIndex = 20;
-            this.button18.Text = "CERRAR";
-            this.button18.UseVisualStyleBackColor = false;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel6.Controls.Add(this.pnlColorFondo);
+            this.panel6.Controls.Add(this.btnColorFondo);
+            this.panel6.Controls.Add(this.PnlColorSecundario);
+            this.panel6.Controls.Add(this.btnColorSecundario);
+            this.panel6.Controls.Add(this.pnlColorPrincipal);
+            this.panel6.Controls.Add(this.btnColorPrincipal);
+            this.panel6.Location = new System.Drawing.Point(48, 7);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(473, 38);
+            this.panel6.TabIndex = 0;
+            // 
+            // pnlColorFondo
+            // 
+            this.pnlColorFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.pnlColorFondo.Location = new System.Drawing.Point(319, 12);
+            this.pnlColorFondo.Name = "pnlColorFondo";
+            this.pnlColorFondo.Size = new System.Drawing.Size(52, 15);
+            this.pnlColorFondo.TabIndex = 30;
+            // 
+            // btnColorFondo
+            // 
+            this.btnColorFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnColorFondo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorFondo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnColorFondo.Location = new System.Drawing.Point(315, 8);
+            this.btnColorFondo.Name = "btnColorFondo";
+            this.btnColorFondo.Size = new System.Drawing.Size(150, 23);
+            this.btnColorFondo.TabIndex = 29;
+            this.btnColorFondo.Text = "                   FONDO";
+            this.btnColorFondo.UseVisualStyleBackColor = false;
+            // 
+            // PnlColorSecundario
+            // 
+            this.PnlColorSecundario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(151)))));
+            this.PnlColorSecundario.Location = new System.Drawing.Point(165, 12);
+            this.PnlColorSecundario.Name = "PnlColorSecundario";
+            this.PnlColorSecundario.Size = new System.Drawing.Size(52, 15);
+            this.PnlColorSecundario.TabIndex = 28;
+            // 
+            // btnColorSecundario
+            // 
+            this.btnColorSecundario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnColorSecundario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorSecundario.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnColorSecundario.Location = new System.Drawing.Point(161, 8);
+            this.btnColorSecundario.Name = "btnColorSecundario";
+            this.btnColorSecundario.Size = new System.Drawing.Size(150, 23);
+            this.btnColorSecundario.TabIndex = 27;
+            this.btnColorSecundario.Text = "                   SECUNDARIO";
+            this.btnColorSecundario.UseVisualStyleBackColor = false;
+            // 
+            // pnlColorPrincipal
+            // 
+            this.pnlColorPrincipal.BackColor = System.Drawing.Color.DarkOrange;
+            this.pnlColorPrincipal.Location = new System.Drawing.Point(11, 12);
+            this.pnlColorPrincipal.Name = "pnlColorPrincipal";
+            this.pnlColorPrincipal.Size = new System.Drawing.Size(52, 15);
+            this.pnlColorPrincipal.TabIndex = 26;
+            // 
+            // btnColorPrincipal
+            // 
+            this.btnColorPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnColorPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColorPrincipal.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnColorPrincipal.Location = new System.Drawing.Point(7, 8);
+            this.btnColorPrincipal.Name = "btnColorPrincipal";
+            this.btnColorPrincipal.Size = new System.Drawing.Size(150, 23);
+            this.btnColorPrincipal.TabIndex = 23;
+            this.btnColorPrincipal.Text = "                   PRINCIPAL";
+            this.btnColorPrincipal.UseVisualStyleBackColor = false;
             // 
             // Pantalla
             // 
@@ -479,47 +471,47 @@ namespace PR3_EQ5_TM
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         public System.Windows.Forms.Panel pnlGraficas;
-        private System.Windows.Forms.Button btnInserción;
-        private System.Windows.Forms.Button btnSelecion;
-        private System.Windows.Forms.Button btnBurbuja;
-        private System.Windows.Forms.Button btnShell;
-        private System.Windows.Forms.Button btnMerge;
-        private System.Windows.Forms.Button btnHeap;
-        private System.Windows.Forms.Button btnQuick;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        public System.Windows.Forms.Button button8;
+        public System.Windows.Forms.Button button9;
+        public System.Windows.Forms.Button button10;
+        public System.Windows.Forms.Button button11;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button12;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Button button12;
         public System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.Button btnPrincipal;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button18;
+        public System.Windows.Forms.Panel PnlColorSecundario;
+        public System.Windows.Forms.Button button7;
+        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Panel panel11;
+        public System.Windows.Forms.Button btnGenerar;
+        public System.Windows.Forms.Button btnCerrar;
+        public System.Windows.Forms.Button btnColorPrincipal;
+        public System.Windows.Forms.Button btnColorSecundario;
+        public System.Windows.Forms.Button btnColorFondo;
+        public System.Windows.Forms.Panel pnlColorPrincipal;
+        public System.Windows.Forms.Panel pnlColorFondo;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.Button btnQuick;
+        public System.Windows.Forms.Button btnHeap;
+        public System.Windows.Forms.Button btnMerge;
+        public System.Windows.Forms.Button btnShell;
+        public System.Windows.Forms.Button btnBurbuja;
+        public System.Windows.Forms.Button btnSelecion;
+        public System.Windows.Forms.Button btnInserción;
+        public System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.Panel panel10;
     }
 }
