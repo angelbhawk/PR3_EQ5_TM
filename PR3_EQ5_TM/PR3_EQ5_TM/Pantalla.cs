@@ -61,11 +61,10 @@ namespace PR3_EQ5_TM
             int x = 5, y = 5;
             int a = 0;
             Graficas = new List<Grafica>();
-            //int[] ArregloUni=new int[28];
             Generadores();
             for (int i = 0; i < 28; i++)
             {
-                Graficas.Add(new Grafica(ArrUni));
+                Graficas.Add(new Grafica(Tam,i));
                 //MessageBox.Show(ArrUni[0].ToString());
 
                 switch (i)

@@ -318,7 +318,7 @@ namespace PR3_EQ5_TM
             this.NudTam.Size = new System.Drawing.Size(120, 22);
             this.NudTam.TabIndex = 20;
             this.NudTam.Value = new decimal(new int[] {
-            20,
+            30,
             0,
             0,
             0});

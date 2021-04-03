@@ -49,26 +49,25 @@ namespace PR3_EQ5_TM.Componentes
             DibujarRectangulos();
 
         }
-        //public Grafica(int tam)
-        //{
-        //    Colores();
-        //    this.DoubleBuffered = true;
-        //    this.Width = 150;
-        //    this.Height = 100;
-        //    this.Paint += new PaintEventHandler(Grafica_Paint);
-        //    this.BackColor = colorFondo;
-        //    //this.DoubleBuffered = true;
+        public Grafica(int tam, int iterador)
+        {
+            Colores();
+            this.DoubleBuffered = true;
+            this.Width = 150;
+            this.Height = 100;
+            this.Paint += new PaintEventHandler(Grafica_Paint);
+            this.BackColor = colorFondo;
+            //this.DoubleBuffered = true;
+            max = tam;
 
-        //    //int[] valoresIniciales;
+            //metodo que define que tipo de numeros aleatorios se asignan al panel
+            Generacion(tam,iterador);
 
+            this.Refresh();
+            DibujarRectangulos();
 
-        //    max = tam;
-        //    //numerosAleatorios = valoresIniciales;
-        //    Inicios(tam);
-        //    this.Refresh();
-        //    DibujarRectangulos();
+        }
 
-        //}
         public Grafica(int[] ArregloUni)
         {
             Colores();
@@ -85,22 +84,79 @@ namespace PR3_EQ5_TM.Componentes
             DibujarRectangulos();
 
         }
-        //public void Inicios(int tam)
-        //{
-        //    int Tam=tam;
-        //    int[] Rand;
-        //    Random Alea = new Random();
-        //    int Num;
-        //    int i = 0;
-        //    Rand = new int[Tam];
-        //    while (i < Tam)
-        //    {
-        //        Num = Alea.Next(1, 30);
-        //        Rand[i] = Num;
-        //        i++;
-        //    }
-        //    numerosAleatorios = Rand;
-        //}
+        #region
+        //metodo que genera los numeros aleatorios en cada panel dependiendo del numero del panel
+        public void Generacion(int Tam, int iterador)
+        {
+            int[] ArrUni;
+            int[] Rand;
+            int[] Inverso;
+            Random Alea = new Random();
+            int Num;
+            int i = 0;
+
+            //arreglo random del que se desprenden todas las generaciones alternativas de nuemros aleatorios
+            Rand = new int[Tam];
+
+            while (i < Tam)
+            {
+                Num = Alea.Next(1, 30);
+                Rand[i] = Num;
+                i++;
+            }
+
+            //metodos donde los arreglos agarran el arreglo aleatorio principal y se modifican paraa que den lugar a las generaciones de numeros aleatorios alternas
+            Inverso = Rand;
+            MetInverso(Inverso);
+
+            //if que definen cual generación de numeros aleatorios toca
+            if (iterador <= 7)
+            {
+                ArrUni = Rand;
+            }
+            if (iterador <= 14 && iterador > 7)
+            {
+                ArrUni = Inverso;
+            }
+            else
+            {
+                ArrUni = Rand;
+            }
+            numerosAleatorios = ArrUni;
+        }
+        //metodos que designan una generación de numeros aleatorios dependinedo del panel
+        public void PocasUnicas(int[] arreglo)
+        {
+            int tamaño = arreglo.Length;
+        }
+        public void MetInverso(int[] arreglo)
+        {
+            BurbujaM(arreglo);
+        }
+
+        //metodo usado para semi ordernar e invertir los numeros aleatorios
+        public void BurbujaM(int[] arreglo)
+        {
+            // Ordena la lista
+            band = true; bd = 0;
+            do
+            {
+                bd++;
+                band = true;
+                for (ba = arreglo.Length; ba > arreglo.Length - bd; ba--)
+                {
+                    if (arreglo[ba] > arreglo[ba + 1])
+                    {
+                        aux = arreglo[ba];
+                        arreglo[ba] = arreglo[ba + 1];
+                        arreglo[ba + 1] = aux;
+                        band = false;
+                    }
+                }
+            }
+            while (!band);
+        }
+        #endregion generacion de numeros
         private void InitializeComponent()
         {
             this.SuspendLayout();
@@ -176,7 +232,6 @@ namespace PR3_EQ5_TM.Componentes
 
                 rectangulosGraficados[rectanguloMenor].Location = new PointF(0, (rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
                 rectangulosGraficados[rectanguloMayor].Location = new PointF(0, (rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
-
                 this.Invoke(new MethodInvoker(Refresh));
 
                 //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMenor]);
@@ -278,6 +333,7 @@ namespace PR3_EQ5_TM.Componentes
             }
             while (!band);
         }              // Burbuja mejorado // Sí
+        
         public void Shell()
         {
             // Ordena la lista
@@ -359,7 +415,6 @@ namespace PR3_EQ5_TM.Componentes
         public void Binario()
         {
             // Ordena la lista
-
             for (int ba = 0; ba < numerosAleatorios.Length; ba++)
             {
                 aux = numerosAleatorios[ba];
