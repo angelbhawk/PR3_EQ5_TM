@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PR3_EQ5_TM.Manejadores
 {
@@ -29,9 +30,13 @@ namespace PR3_EQ5_TM.Manejadores
             {
                 na = r.Next(1, t);
                 arreglo[i] = na;
-                invertido[i] = na;
-                casiOrdenado[i] = na;
+                //invertido[i] = na;
+                //casiOrdenado[i] = na;
             }
+            invertido = (int[])arreglo.Clone();
+            //MessageBox.Show(arreglo[0].ToString());
+            casiOrdenado = (int[])arreglo.Clone();
+
         }
         private void InvertirArreglo(int t)
         {

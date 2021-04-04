@@ -65,7 +65,7 @@ namespace PR3_EQ5_TM.Componentes
         }
         public void ActualizarDatos(int[] valores) 
         {
-            int[] valoresIniciales = valores;
+            int[] valoresIniciales =(int[]) valores.Clone();
 
             max = valoresIniciales.Length;
             numerosAleatorios = valoresIniciales;
