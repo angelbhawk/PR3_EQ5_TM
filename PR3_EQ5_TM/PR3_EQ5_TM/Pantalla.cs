@@ -6,18 +6,24 @@ namespace PR3_EQ5_TM
 {
     public partial class Pantalla : Form
     {
-        ManejadorGrafico manejadorGrafico;
-        Graficas graficas;
+        private EventosInterfaz manejadorGrafico;
+        private ManejoGraficas listaGraficas;
+        private ManejoHilos metodosOrdenación;
 
         public Pantalla()
         {
             InitializeComponent();
         }
 
+        internal ManejoGraficas ListaGraficas { get => listaGraficas; set => listaGraficas = value; }
+        internal EventosInterfaz ManejadorGrafico { get => manejadorGrafico; set => manejadorGrafico = value; }
+        internal ManejoHilos MetodosOrdenación { get => metodosOrdenación; set => metodosOrdenación = value; }
+
         private void Pantalla_Load(object sender, EventArgs e)
         {
-            manejadorGrafico = new ManejadorGrafico();
-            graficas = new Graficas();
+            ManejadorGrafico = new EventosInterfaz();
+            ListaGraficas = new ManejoGraficas();
+            MetodosOrdenación = new ManejoHilos();
         }
     }
 }

@@ -70,10 +70,10 @@
     <Compile Include="Git.Designer.cs">
       <DependentUpon>Git.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manejadores\AlmacenArreglos.cs" />
-    <Compile Include="Manejadores\Graficas.cs" />
-    <Compile Include="Manejadores\ManejadorFlujo.cs" />
-    <Compile Include="Manejadores\ManejadorGrafico.cs" />
+    <Compile Include="Manejadores\GeneradorValores.cs" />
+    <Compile Include="Manejadores\ManejoGraficas.cs" />
+    <Compile Include="Manejadores\ManejoHilos.cs" />
+    <Compile Include="Manejadores\EventosInterfaz.cs" />
     <Compile Include="Pantalla.cs">
       <SubType>Form</SubType>
     </Compile>

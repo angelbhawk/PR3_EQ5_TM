@@ -45,16 +45,16 @@ namespace PR3_EQ5_TM
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnTodos = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn50 = new System.Windows.Forms.Button();
+            this.btn40 = new System.Windows.Forms.Button();
+            this.btn30 = new System.Windows.Forms.Button();
+            this.btn20 = new System.Windows.Forms.Button();
+            this.btn10 = new System.Windows.Forms.Button();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pnlColorFondo = new System.Windows.Forms.Panel();
@@ -213,7 +213,7 @@ namespace PR3_EQ5_TM
             this.panel1.Controls.Add(this.btnShell);
             this.panel1.Controls.Add(this.btnMerge);
             this.panel1.Controls.Add(this.btnHeap);
-            this.panel1.Location = new System.Drawing.Point(48, 8);
+            this.panel1.Location = new System.Drawing.Point(48, 7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1090, 34);
             this.panel1.TabIndex = 15;
@@ -225,7 +225,7 @@ namespace PR3_EQ5_TM
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button10);
-            this.panel2.Location = new System.Drawing.Point(8, 48);
+            this.panel2.Location = new System.Drawing.Point(7, 48);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(34, 425);
             this.panel2.TabIndex = 16;
@@ -244,22 +244,22 @@ namespace PR3_EQ5_TM
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel4.Controls.Add(this.button12);
-            this.panel4.Location = new System.Drawing.Point(8, 8);
+            this.panel4.Controls.Add(this.btnTodos);
+            this.panel4.Location = new System.Drawing.Point(7, 7);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(34, 34);
             this.panel4.TabIndex = 17;
             // 
-            // button12
+            // btnTodos
             // 
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button12.Location = new System.Drawing.Point(6, 6);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(23, 23);
-            this.button12.TabIndex = 5;
-            this.button12.Text = "T";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTodos.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTodos.Location = new System.Drawing.Point(6, 6);
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(23, 23);
+            this.btnTodos.TabIndex = 5;
+            this.btnTodos.Text = "T";
+            this.btnTodos.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -295,76 +295,76 @@ namespace PR3_EQ5_TM
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel10.Controls.Add(this.button7);
-            this.panel10.Controls.Add(this.button6);
-            this.panel10.Controls.Add(this.button5);
-            this.panel10.Controls.Add(this.button4);
-            this.panel10.Controls.Add(this.button3);
+            this.panel10.Controls.Add(this.btn50);
+            this.panel10.Controls.Add(this.btn40);
+            this.panel10.Controls.Add(this.btn30);
+            this.panel10.Controls.Add(this.btn20);
+            this.panel10.Controls.Add(this.btn10);
             this.panel10.Controls.Add(this.btnGenerar);
             this.panel10.Location = new System.Drawing.Point(527, 7);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(347, 38);
             this.panel10.TabIndex = 21;
             // 
-            // button7
+            // btn50
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button7.Location = new System.Drawing.Point(152, 8);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 23);
-            this.button7.TabIndex = 24;
-            this.button7.Text = "50";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btn50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.btn50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn50.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn50.Location = new System.Drawing.Point(152, 8);
+            this.btn50.Name = "btn50";
+            this.btn50.Size = new System.Drawing.Size(30, 23);
+            this.btn50.TabIndex = 24;
+            this.btn50.Text = "50";
+            this.btn50.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btn40
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Location = new System.Drawing.Point(116, 8);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(30, 23);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "40";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btn40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.btn40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn40.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn40.Location = new System.Drawing.Point(116, 8);
+            this.btn40.Name = "btn40";
+            this.btn40.Size = new System.Drawing.Size(30, 23);
+            this.btn40.TabIndex = 23;
+            this.btn40.Text = "40";
+            this.btn40.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btn30
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.button5.Location = new System.Drawing.Point(80, 8);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(30, 23);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "30";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn30.BackColor = System.Drawing.Color.White;
+            this.btn30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.btn30.Location = new System.Drawing.Point(80, 8);
+            this.btn30.Name = "btn30";
+            this.btn30.Size = new System.Drawing.Size(30, 23);
+            this.btn30.TabIndex = 22;
+            this.btn30.Text = "30";
+            this.btn30.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btn20
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Location = new System.Drawing.Point(44, 8);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 23);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "20";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.btn20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn20.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn20.Location = new System.Drawing.Point(44, 8);
+            this.btn20.Name = "btn20";
+            this.btn20.Size = new System.Drawing.Size(30, 23);
+            this.btn20.TabIndex = 21;
+            this.btn20.Text = "20";
+            this.btn20.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btn10
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(8, 8);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "10";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.btn10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn10.Location = new System.Drawing.Point(8, 8);
+            this.btn10.Name = "btn10";
+            this.btn10.Size = new System.Drawing.Size(30, 23);
+            this.btn10.TabIndex = 6;
+            this.btn10.Text = "10";
+            this.btn10.UseVisualStyleBackColor = false;
             // 
             // btnGenerar
             // 
@@ -487,14 +487,14 @@ namespace PR3_EQ5_TM
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Button button12;
+        public System.Windows.Forms.Button btnTodos;
         public System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Panel PnlColorSecundario;
-        public System.Windows.Forms.Button button7;
-        public System.Windows.Forms.Button button6;
-        public System.Windows.Forms.Button button5;
-        public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button btn50;
+        public System.Windows.Forms.Button btn40;
+        public System.Windows.Forms.Button btn30;
+        public System.Windows.Forms.Button btn20;
+        public System.Windows.Forms.Button btn10;
         public System.Windows.Forms.Panel panel11;
         public System.Windows.Forms.Button btnGenerar;
         public System.Windows.Forms.Button btnCerrar;

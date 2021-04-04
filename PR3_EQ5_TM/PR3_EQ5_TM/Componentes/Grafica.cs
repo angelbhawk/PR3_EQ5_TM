@@ -18,6 +18,7 @@ namespace PR3_EQ5_TM.Componentes
         private int aux, avx, ba, bb, bc, bd, be, rectanguloMenor = -1, rectanguloMayor = -1, max, nv;
         private double pv;
         private bool band;
+        private string tipo;
 
         // Gráficos
         private Pen p;
@@ -26,8 +27,9 @@ namespace PR3_EQ5_TM.Componentes
         private Color colorPrimario, colorSecundario, colorFondo;
 
         public int Nv { get => nv; set => nv = value; }
+        public string Tipo { get => tipo; set => tipo = value; }
 
-        public Grafica(int numval)
+        public Grafica()
         // : base(parametros pero no tiene)
         {
             Colores();
@@ -36,27 +38,13 @@ namespace PR3_EQ5_TM.Componentes
             this.Height = 100;
             this.Paint += new PaintEventHandler(Grafica_Paint);
             this.BackColor = colorFondo;
-            //this.DoubleBuffered = true;
-            int[] valoresIniciales = new int[] { 10, 4, 8, 9, 1, 1, 10, 9, 7, 9 };
 
-            Nv = numval;
-
-            // 10
-            if (Nv == 10) { valoresIniciales = new int[]{ 10, 4, 8, 9, 1, 1, 10, 9, 7, 9 };  }
-            // 20 
-            if (Nv == 20) { valoresIniciales = new int[] { 18, 2, 5, 20, 4, 1, 20, 19, 12, 2, 9, 15, 9, 3, 7, 9, 4, 20, 16, 5 }; }
-            // 30 
-            if (Nv == 10) { valoresIniciales = new int[] { 13, 11, 9, 5, 29, 23, 17, 21, 15, 3, 20, 3, 13, 23, 15, 30, 11, 16, 6, 29, 9, 11, 21, 11, 9, 17, 19, 7, 23, 15, 12, 13, 16 }; }
-            // 40 
-            if (Nv == 10) { valoresIniciales = new int[] { 35, 37, 18, 6, 2, 32, 33, 23, 33, 17, 28, 6, 3, 9, 15, 10, 20, 35, 36, 17, 11, 31, 30, 3, 36, 32, 33, 32, 9, 36, 40, 25, 18, 26, 1, 34, 13, 26, 25, 9 }; }
-            // 50 
-            if (Nv == 10) { valoresIniciales = new int[] { 37, 4, 37, 31, 8, 26, 32, 47, 19, 28, 35, 35, 4, 1, 31, 20, 3, 39, 21, 39, 32, 29, 22, 10, 16, 35, 12, 11, 18, 3, 17, 30, 25, 39, 29, 49, 17, 12, 18, 20, 37, 40, 46, 21, 17, 43, 5, 46, 23, 41 }; }
+            int[] valoresIniciales = new int[] { 0,0,0 };
 
             max = valoresIniciales.Length;
             numerosAleatorios = valoresIniciales;
             this.Refresh();
             DibujarRectangulos();
-
         }
         public Grafica(int tam, string a)
         {
@@ -74,6 +62,15 @@ namespace PR3_EQ5_TM.Componentes
             this.Refresh();
             DibujarRectangulos();
 
+        }
+        public void ActualizarDatos(int[] valores) 
+        {
+            int[] valoresIniciales = valores;
+
+            max = valoresIniciales.Length;
+            numerosAleatorios = valoresIniciales;
+            this.Refresh();
+            DibujarRectangulos();
         }
         public void Inicios(int tam)
         {
