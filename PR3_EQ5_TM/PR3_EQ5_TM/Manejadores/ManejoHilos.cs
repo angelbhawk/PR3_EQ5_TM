@@ -28,8 +28,9 @@ namespace PR3_EQ5_TM.Manejadores
             frm.btnHeap.Click += new EventHandler(btnHeap_Click);
             frm.btnQuick.Click += new EventHandler(btnQuick_Click);
             frm.btnTodos.Click += new EventHandler(btnAll_Click);
+            
         }
-
+        
         public void btnInserción_Click(object sender, EventArgs e)
         {
             Thread HiloInser = new Thread(Inserciones);

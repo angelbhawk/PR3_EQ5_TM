@@ -25,10 +25,17 @@ namespace PR3_EQ5_TM.Manejadores
             frm.btn20.Click += new EventHandler(btnValores_Click);
             frm.btn30.Click += new EventHandler(btnValores_Click);
             frm.btn40.Click += new EventHandler(btnValores_Click);
-            frm.btn50.Click += new EventHandler(btnValores_Click); 
+            frm.btn50.Click += new EventHandler(btnValores_Click);
             frm.btnGenerar.Click += new EventHandler(btnGenerar_Click);
+            frm.btnGenerar.Click += new EventHandler(btnGenerar_Click2);
         }
-
+        private void btnGenerar_Click2(object seder, EventArgs e)
+        {
+            frm.ListaGraficas.Tamaño = Convert.ToInt32(frm.NudTam.Value);
+            frm.pnlGraficas.Controls.Clear();
+            frm.ListaGraficas.CrearGraficas();
+            frm.pnlGraficas.Refresh();
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();

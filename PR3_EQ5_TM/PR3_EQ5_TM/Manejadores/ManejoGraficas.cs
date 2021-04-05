@@ -10,7 +10,7 @@ namespace PR3_EQ5_TM.Manejadores
 {
     class ManejoGraficas
     {
-        private int tamaño;
+        public int tamaño;
         private Pantalla frm;
         private GeneradorValores gvl;
         public List<Grafica> ListaGraficas;
@@ -19,6 +19,12 @@ namespace PR3_EQ5_TM.Manejadores
         {
             frm = Application.OpenForms.OfType<Pantalla>().FirstOrDefault();
             Tamaño = 30;
+            CrearGraficas();
+        }
+        public ManejoGraficas(int Tam)
+        {
+            frm = Application.OpenForms.OfType<Pantalla>().FirstOrDefault();
+            Tamaño = Tam;
             CrearGraficas();
         }
 

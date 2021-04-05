@@ -19,6 +19,7 @@ namespace PR3_EQ5_TM.Manejadores
             CasiOrdenado();
         }
 
+
         private void GenerarArregloAleatorio(int t)
         {
             Random r = new Random();

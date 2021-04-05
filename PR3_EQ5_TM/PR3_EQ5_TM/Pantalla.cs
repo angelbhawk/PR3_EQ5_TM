@@ -9,6 +9,7 @@ namespace PR3_EQ5_TM
         private EventosInterfaz manejadorGrafico;
         private ManejoGraficas listaGraficas;
         private ManejoHilos metodosOrdenación;
+        public int Tamaño=30;
 
         public Pantalla()
         {
@@ -22,8 +23,13 @@ namespace PR3_EQ5_TM
         private void Pantalla_Load(object sender, EventArgs e)
         {
             ManejadorGrafico = new EventosInterfaz();
-            ListaGraficas = new ManejoGraficas();
+            ListaGraficas = new ManejoGraficas(Tamaño);
             MetodosOrdenación = new ManejoHilos();
+        }
+
+        private void btn30_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
