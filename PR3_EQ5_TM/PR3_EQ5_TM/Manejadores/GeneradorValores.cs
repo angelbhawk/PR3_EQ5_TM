@@ -30,11 +30,8 @@ namespace PR3_EQ5_TM.Manejadores
             {
                 na = r.Next(1, t);
                 arreglo[i] = na;
-                //invertido[i] = na;
-                //casiOrdenado[i] = na;
             }
             invertido = (int[])arreglo.Clone();
-            //MessageBox.Show(arreglo[0].ToString());
             casiOrdenado = (int[])arreglo.Clone();
 
         }
@@ -45,8 +42,29 @@ namespace PR3_EQ5_TM.Manejadores
         }
         private void CasiOrdenado()
         {
-            Array.Sort(casiOrdenado);
+            int ba;
+            bool band;
+            int bd;
+            int aux;
+            band = true; bd = 0;
+            do
+            {
+                bd++;
+                band = true;
+                for (ba = 0; ba < casiOrdenado.Length - bd; ba++)
+                {
+                    if (casiOrdenado[ba] > casiOrdenado[ba + 1]+1)
+                    {
+                        aux = casiOrdenado[ba];
+                        casiOrdenado[ba] = casiOrdenado[ba + 1];
+                        casiOrdenado[ba + 1] = aux;
+                        band = false;
+                    }
+                }
+            }
+            while (!band);
         }
+
         private void PocasUnicas(int t)
         {
             int c = 0;
