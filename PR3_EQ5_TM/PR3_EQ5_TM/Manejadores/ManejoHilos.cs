@@ -11,7 +11,13 @@ namespace PR3_EQ5_TM.Manejadores
     class ManejoHilos
     {
         private Pantalla frm;
-
+        Thread HiloBurbu;
+        Thread HiloInser;
+        Thread HiloSelec;
+        Thread HiloShells;
+        Thread HiloMerges;
+        Thread HiloHeaps;
+        Thread HiloQuicks;
         public ManejoHilos() 
         {
             frm = Application.OpenForms.OfType<Pantalla>().FirstOrDefault();
@@ -28,73 +34,114 @@ namespace PR3_EQ5_TM.Manejadores
             frm.btnHeap.Click += new EventHandler(btnHeap_Click);
             frm.btnQuick.Click += new EventHandler(btnQuick_Click);
             frm.btnTodos.Click += new EventHandler(btnAll_Click);
-            
+            frm.FormClosing += new FormClosingEventHandler(SalirHilos);
+
         }
-        
+        // metodo que toma el evento form closing para abortar los hilos al cerrar el form por le usuario
+        private void SalirHilos(object sender, EventArgs e)
+        {
+            if (HiloBurbu!=null)
+            {
+                HiloBurbu.Abort();
+            }
+            if (HiloHeaps != null)
+            {
+                HiloHeaps.Abort();
+            }
+            if (HiloInser != null)
+            {
+                HiloInser.Abort();
+            }
+            if (HiloMerges != null)
+            {
+                HiloMerges.Abort();
+            }
+            if (HiloQuicks != null)
+            {
+                HiloQuicks.Abort();
+            }
+            if (HiloSelec != null)
+            {
+                HiloSelec.Abort();
+            }
+            if (HiloShells != null)
+            {
+                HiloShells.Abort();
+            }
+
+            //HiloBurbu.Abort();
+            //HiloHeaps.Abort();
+            //HiloInser.Abort();
+            //HiloMerges.Abort();
+            //HiloQuicks.Abort();
+            //HiloSelec.Abort();
+            //HiloShells.Abort();
+        }
         public void btnInserción_Click(object sender, EventArgs e)
         {
-            Thread HiloInser = new Thread(Inserciones);
+            HiloInser = new Thread(Inserciones);
             HiloInser.Start();
 
         }
 
         private void btnSelecion_Click(object sender, EventArgs e)
         {
-            Thread HiloSelec = new Thread(Selecciones);
+            HiloSelec = new Thread(Selecciones);
             HiloSelec.Start();
         }
 
         private void btnBurbuja_Click(object sender, EventArgs e)
         {
-            Thread HiloBurbu = new Thread(Burbujas);
+            HiloBurbu = new Thread(Burbujas);
+            //HiloBurbu.IsBackground = true;
             HiloBurbu.Start();
         }
 
         private void btnShell_Click(object sender, EventArgs e)
         {
-            Thread HiloShells = new Thread(Shells);
+            HiloShells = new Thread(Shells);
             HiloShells.Start();
         }
 
         private void btnMerge_Click(object sender, EventArgs e)
         {
-            Thread HiloMerges = new Thread(Merges);
+            HiloMerges = new Thread(Merges);
             HiloMerges.Start();
         }
 
         private void btnHeap_Click(object sender, EventArgs e)
         {
-            Thread HiloHeaps = new Thread(Heaps);
+            HiloHeaps = new Thread(Heaps);
             HiloHeaps.Start();
         }
 
         private void btnQuick_Click(object sender, EventArgs e)
         {
-            Thread HiloQuicks = new Thread(Quicks);
+            HiloQuicks = new Thread(Quicks);
             HiloQuicks.Start();
         }
 
         private void btnAll_Click(object sender, EventArgs e)
         {
-            Thread HiloHeap = new Thread(Heaps);
-            HiloHeap.Start();
+            HiloHeaps = new Thread(Heaps);
+            HiloHeaps.Start();
 
-            Thread HiloMerges = new Thread(Merges);
+            HiloMerges = new Thread(Merges);
             HiloMerges.Start();
 
-            Thread HiloBurbu = new Thread(Burbujas);
+            HiloBurbu = new Thread(Burbujas);
             HiloBurbu.Start();
 
-            Thread HiloInser = new Thread(Inserciones);
+            HiloInser = new Thread(Inserciones);
             HiloInser.Start();
 
-            Thread HiloSelec = new Thread(Selecciones);
+            HiloSelec = new Thread(Selecciones);
             HiloSelec.Start();
 
-            Thread HiloShells = new Thread(Shells);
+            HiloShells = new Thread(Shells);
             HiloShells.Start();
 
-            Thread HiloQuicks = new Thread(Quicks);
+            HiloQuicks = new Thread(Quicks);
             HiloQuicks.Start();
         }
 
