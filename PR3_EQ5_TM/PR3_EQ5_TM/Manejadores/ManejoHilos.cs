@@ -44,7 +44,7 @@ namespace PR3_EQ5_TM.Manejadores
             frm.btnCasi.Click += new EventHandler(btnCasiOr_click);
             frm.btnInvert.Click += new EventHandler(btnInver_click);
             frm.btnPocas.Click += new EventHandler(btnPocas_click);
-
+            frm.btnGenerar.Click += new EventHandler(SalirHilos);
         }
         // metodo que toma el evento form closing para abortar los hilos al cerrar el form por le usuario
         private void SalirHilos(object sender, EventArgs e)
