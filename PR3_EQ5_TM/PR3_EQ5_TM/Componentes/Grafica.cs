@@ -135,54 +135,68 @@ namespace PR3_EQ5_TM.Componentes
 
         private void DibujarRectangulos()
         {
+
             rectangulosGraficados = new RectangleF[numerosAleatorios.Length]; // Crea el arreglo de rectangulos
-            float Gros;
-            float Py;
-            //for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
-            //{
-            //    if (numRec == 0)
-            //        rectangulosGraficados[numRec] = new Rectangle(0, ((this.Height) / max * (numRec)), this.Width / max * numerosAleatorios[numRec], (this.Height) / (numerosAleatorios.Length)-1);
-            //    else
-            //        rectangulosGraficados[numRec] = new Rectangle(0, ((this.Height) / max * (numRec)), this.Width / max * numerosAleatorios[numRec], (this.Height) /(numerosAleatorios.Length)-1);
-            //}
-            for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
+            lock (rectangulosGraficados)
             {
-                Py =  (this.Height / max * numRec);
-                Gros = ((this.Height / numerosAleatorios.Length)-1);
-                if (numRec == 0)
-                    rectangulosGraficados[numRec] = new RectangleF(0,Convert.ToSingle(Py), this.Width / max * numerosAleatorios[numRec], Convert.ToSingle(Gros));
-                else
-                    rectangulosGraficados[numRec] = new RectangleF(0, Convert.ToSingle(Py), this.Width / max * numerosAleatorios[numRec], Convert.ToSingle(Gros));
+                float Gros;
+                float Py;
+                //for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
+                //{
+                //    if (numRec == 0)
+                //        rectangulosGraficados[numRec] = new Rectangle(0, ((this.Height) / max * (numRec)), this.Width / max * numerosAleatorios[numRec], (this.Height) / (numerosAleatorios.Length)-1);
+                //    else
+                //        rectangulosGraficados[numRec] = new Rectangle(0, ((this.Height) / max * (numRec)), this.Width / max * numerosAleatorios[numRec], (this.Height) /(numerosAleatorios.Length)-1);
+                //}
+                for (int numRec = 0; numRec < numerosAleatorios.Length; numRec++) // Genera los rectangulos con la lista de numerosAleatorios
+                {
+                    Py = (this.Height / max * numRec);
+                    Gros = ((this.Height / numerosAleatorios.Length) - 1);
+                    if (numRec == 0)
+                        rectangulosGraficados[numRec] = new RectangleF(0, Convert.ToSingle(Py), this.Width / max * numerosAleatorios[numRec], Convert.ToSingle(Gros));
+                    else
+                        rectangulosGraficados[numRec] = new RectangleF(0, Convert.ToSingle(Py), this.Width / max * numerosAleatorios[numRec], Convert.ToSingle(Gros));
+                }
             }
+            
         }
 
         private void Animacion(int k, int w)
         {
-            rectanguloMenor = k;
+            try
+            {
+                rectanguloMenor = k;
             rectanguloMayor = w;
             float distancia = rectangulosGraficados[rectanguloMayor].Top - rectangulosGraficados[rectanguloMayor].Top;
             float yk = rectangulosGraficados[rectanguloMenor].Top,
                 yw = rectangulosGraficados[rectanguloMayor].Top;
+            
+                while (rectangulosGraficados[rectanguloMenor].Top < yw)
+                {
 
-            while (rectangulosGraficados[rectanguloMenor].Top < yw)
-            {
+                    rectangulosGraficados[rectanguloMenor].Location = new PointF(0, (rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
+                    rectangulosGraficados[rectanguloMayor].Location = new PointF(0, (rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
 
-                rectangulosGraficados[rectanguloMenor].Location = new PointF(0, (rectangulosGraficados[rectanguloMenor].Top) + this.Height / max * 1);
-                rectangulosGraficados[rectanguloMayor].Location = new PointF(0, (rectangulosGraficados[rectanguloMayor].Top) - this.Height / max * 1);
+                    this.Invoke(new MethodInvoker(Refresh));
 
-                this.Invoke(new MethodInvoker(Refresh));
+                    //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMenor]);
+                    //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMayor]);
 
-                //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMenor]);
-                //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMayor]);
+                    Thread.Sleep(10);
 
-                Thread.Sleep(10);
-
-                //Invalidate();
+                    //Invalidate();
+                }
+                //g.FillRectangle(pincelPrincipal, rectangulosGraficados[rectanguloMayor]);
+                //g.FillRectangle(pincelPrincipal, rectangulosGraficados[rectanguloMayor]);
+                rectanguloMenor = -1;
+                rectanguloMayor = -1;
             }
-            //g.FillRectangle(pincelPrincipal, rectangulosGraficados[rectanguloMayor]);
-            //g.FillRectangle(pincelPrincipal, rectangulosGraficados[rectanguloMayor]);
-            rectanguloMenor = -1;
-            rectanguloMayor = -1;
+            catch (IndexOutOfRangeException Ex)
+            {
+                //MessageBox.Show(Ex.Message);
+            }
+
+
         } // Anima xd
 
         #region Metodos de grafiacion

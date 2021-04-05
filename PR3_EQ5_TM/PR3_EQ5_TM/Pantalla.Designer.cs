@@ -37,10 +37,10 @@ namespace PR3_EQ5_TM
             this.btnMerge = new System.Windows.Forms.Button();
             this.btnHeap = new System.Windows.Forms.Button();
             this.btnQuick = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnRand = new System.Windows.Forms.Button();
+            this.btnCasi = new System.Windows.Forms.Button();
+            this.btnInvert = new System.Windows.Forms.Button();
+            this.btnPocas = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -169,53 +169,53 @@ namespace PR3_EQ5_TM
             this.btnQuick.Text = "QUICK";
             this.btnQuick.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnRand
             // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button8.Location = new System.Drawing.Point(8, 7);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(31, 122);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "RANDOM";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnRand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRand.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRand.Location = new System.Drawing.Point(8, 7);
+            this.btnRand.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRand.Name = "btnRand";
+            this.btnRand.Size = new System.Drawing.Size(31, 122);
+            this.btnRand.TabIndex = 11;
+            this.btnRand.Text = "RANDOM";
+            this.btnRand.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnCasi
             // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button9.Location = new System.Drawing.Point(8, 137);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(31, 121);
-            this.button9.TabIndex = 12;
-            this.button9.Text = "CASI";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnCasi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCasi.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCasi.Location = new System.Drawing.Point(8, 137);
+            this.btnCasi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCasi.Name = "btnCasi";
+            this.btnCasi.Size = new System.Drawing.Size(31, 121);
+            this.btnCasi.TabIndex = 12;
+            this.btnCasi.Text = "CASI";
+            this.btnCasi.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnInvert
             // 
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button10.Location = new System.Drawing.Point(8, 265);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(31, 123);
-            this.button10.TabIndex = 13;
-            this.button10.Text = "INVERT";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnInvert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvert.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnInvert.Location = new System.Drawing.Point(8, 265);
+            this.btnInvert.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInvert.Name = "btnInvert";
+            this.btnInvert.Size = new System.Drawing.Size(31, 123);
+            this.btnInvert.TabIndex = 13;
+            this.btnInvert.Text = "INVERT";
+            this.btnInvert.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnPocas
             // 
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button11.Location = new System.Drawing.Point(8, 395);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(31, 122);
-            this.button11.TabIndex = 14;
-            this.button11.Text = "POCAS";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnPocas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPocas.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPocas.Location = new System.Drawing.Point(8, 395);
+            this.btnPocas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPocas.Name = "btnPocas";
+            this.btnPocas.Size = new System.Drawing.Size(31, 122);
+            this.btnPocas.TabIndex = 14;
+            this.btnPocas.Text = "POCAS";
+            this.btnPocas.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -236,10 +236,10 @@ namespace PR3_EQ5_TM
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button10);
+            this.panel2.Controls.Add(this.btnRand);
+            this.panel2.Controls.Add(this.btnCasi);
+            this.panel2.Controls.Add(this.btnPocas);
+            this.panel2.Controls.Add(this.btnInvert);
             this.panel2.Location = new System.Drawing.Point(9, 59);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
@@ -552,10 +552,10 @@ namespace PR3_EQ5_TM
 
         #endregion
         public System.Windows.Forms.Panel pnlGraficas;
-        public System.Windows.Forms.Button button8;
-        public System.Windows.Forms.Button button9;
-        public System.Windows.Forms.Button button10;
-        public System.Windows.Forms.Button button11;
+        public System.Windows.Forms.Button btnRand;
+        public System.Windows.Forms.Button btnCasi;
+        public System.Windows.Forms.Button btnInvert;
+        public System.Windows.Forms.Button btnPocas;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel3;

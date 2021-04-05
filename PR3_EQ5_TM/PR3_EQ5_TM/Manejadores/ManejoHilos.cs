@@ -18,6 +18,10 @@ namespace PR3_EQ5_TM.Manejadores
         Thread HiloMerges;
         Thread HiloHeaps;
         Thread HiloQuicks;
+        Thread Lat1;
+        Thread Lat2;
+        Thread Lat3;
+        Thread Lat4;
         public ManejoHilos() 
         {
             frm = Application.OpenForms.OfType<Pantalla>().FirstOrDefault();
@@ -35,6 +39,11 @@ namespace PR3_EQ5_TM.Manejadores
             frm.btnQuick.Click += new EventHandler(btnQuick_Click);
             frm.btnTodos.Click += new EventHandler(btnAll_Click);
             frm.FormClosing += new FormClosingEventHandler(SalirHilos);
+
+            frm.btnRand.Click += new EventHandler(btnRandom_click);
+            frm.btnCasi.Click += new EventHandler(btnCasiOr_click);
+            frm.btnInvert.Click += new EventHandler(btnInver_click);
+            frm.btnPocas.Click += new EventHandler(btnPocas_click);
 
         }
         // metodo que toma el evento form closing para abortar los hilos al cerrar el form por le usuario
@@ -68,14 +77,22 @@ namespace PR3_EQ5_TM.Manejadores
             {
                 HiloShells.Abort();
             }
-
-            //HiloBurbu.Abort();
-            //HiloHeaps.Abort();
-            //HiloInser.Abort();
-            //HiloMerges.Abort();
-            //HiloQuicks.Abort();
-            //HiloSelec.Abort();
-            //HiloShells.Abort();
+            if (Lat1 != null)
+            {
+                Lat1.Abort();
+            }
+            if (Lat2 != null)
+            {
+                Lat2.Abort();
+            }
+            if (Lat3 != null)
+            {
+                Lat3.Abort();
+            }
+            if (Lat4 != null)
+            {
+                Lat4.Abort();
+            }
         }
         public void btnInserción_Click(object sender, EventArgs e)
         {
@@ -93,7 +110,7 @@ namespace PR3_EQ5_TM.Manejadores
         private void btnBurbuja_Click(object sender, EventArgs e)
         {
             HiloBurbu = new Thread(Burbujas);
-            //HiloBurbu.IsBackground = true;
+            //HiloBurbu.IsBackground = true; también sirve paraa abortar hilos 
             HiloBurbu.Start();
         }
 
@@ -144,6 +161,59 @@ namespace PR3_EQ5_TM.Manejadores
             HiloQuicks = new Thread(Quicks);
             HiloQuicks.Start();
         }
+        private void btnRandom_click(object sender, EventArgs e)
+        {
+            int i = 0;
+            // () =>  para especificar un parametro a un thread
+            Lat1 = new Thread(() => LatIn(i));
+            Task.Run(() => LatSele(i));
+            Task.Run(() => LatBurbu(i));
+            Task.Run(() => LatShell(i));
+            Task.Run(() => LatQuick(i));
+            Task.Run(() => LatMerge(i));
+            Task.Run(() => LatHeap(i));
+            Lat1.Start();
+        }
+        private void btnCasiOr_click(object sender, EventArgs e)
+        {
+            int i = 7;
+            // () =>  para especificar un parametro a un thread
+            Lat2 = new Thread(() => LatIn(i));
+            Task.Run(() => LatSele(i));
+            Task.Run(() => LatBurbu(i));
+            Task.Run(() => LatShell(i));
+            Task.Run(() => LatQuick(i));
+            Task.Run(() => LatMerge(i));
+            Task.Run(() => LatHeap(i));
+            Lat2.Start();
+        }
+        private void btnPocas_click(object sender, EventArgs e)
+        {
+            int i = 21;
+            // () =>  para especificar un parametro a un thread
+            Lat4 = new Thread(() => LatIn(i));
+            Task.Run(() => LatSele(i));
+            Task.Run(() => LatBurbu(i));
+            Task.Run(() => LatShell(i));
+            Task.Run(() => LatQuick(i));
+            Task.Run(() => LatMerge(i));
+            Task.Run(() => LatHeap(i));
+            Lat4.Start();
+        }
+        private void btnInver_click(object sender, EventArgs e)
+        {
+            int i = 14;
+            // () =>  para especificar un parametro a un thread
+            Lat3 = new Thread(() => LatIn(i));
+            Task.Run(() => LatSele(i));
+            Task.Run(() => LatBurbu(i));
+            Task.Run(() => LatShell(i));
+            Task.Run(() => LatQuick(i));
+            Task.Run(() => LatMerge(i));
+            Task.Run(() => LatHeap(i));
+            Lat3.Start();
+        }
+
 
         public void Inserciones()
         {
@@ -195,5 +265,35 @@ namespace PR3_EQ5_TM.Manejadores
             frm.ListaGraficas.ListaGraficas[19].Ordenar("Heap");
             frm.ListaGraficas.ListaGraficas[26].Ordenar("Heap");
         }
+        //botones del lado izquierdo
+        public void LatIn(int i)
+        {
+            frm.ListaGraficas.ListaGraficas[0+i].Ordenar("Inserción Binaria");
+        }
+        public void LatSele(int i)
+        {
+            frm.ListaGraficas.ListaGraficas[1 + i].Ordenar("Selección");
+        }
+        public void LatBurbu(int i)
+        {
+            frm.ListaGraficas.ListaGraficas[2 + i].Ordenar("Burbuja Mejorada");
+        }
+        public void LatShell(int i)
+        {
+            frm.ListaGraficas.ListaGraficas[3 + i].Ordenar("Shell");
+        }
+        public void LatQuick(int i)
+        {
+            frm.ListaGraficas.ListaGraficas[4 + i].Ordenar("Quicksort");
+        }
+        public void LatMerge(int i)
+        {
+            frm.ListaGraficas.ListaGraficas[5 + i].Ordenar("Merge");
+        }
+        public void LatHeap(int i)
+        {
+            frm.ListaGraficas.ListaGraficas[6 + i].Ordenar("Heap");
+        }
+
     }
 }
