@@ -19,7 +19,7 @@ namespace PR3_EQ5_TM.Componentes
         private double pv;
         private bool band;
         private string tipo;
-
+        string opcional;
         // Gráficos
         private Pen p;
         private Graphics g;
@@ -181,8 +181,14 @@ namespace PR3_EQ5_TM.Componentes
 
                     //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMenor]);
                     //g.FillRectangle(pincelSecundario, rectangulosGraficados[rectanguloMayor]);
-
-                    Thread.Sleep(10);
+                    if (opcional == "Merge" || opcional == "Heap")
+                    {
+                        Thread.Sleep(1);
+                    }
+                    else
+                    {
+                        Thread.Sleep(10);
+                    }
 
                     //Invalidate();
                 }
@@ -198,7 +204,7 @@ namespace PR3_EQ5_TM.Componentes
 
 
         } // Anima xd
-
+        
         #region Metodos de grafiacion
         public void CambioColor(string cambio, Color color)
         {
@@ -220,6 +226,7 @@ namespace PR3_EQ5_TM.Componentes
 
         public void Ordenar(string métodoSelecionado)
         {
+            opcional = métodoSelecionado;
             switch (métodoSelecionado)
             {
                 case "Burbuja Tradicional":

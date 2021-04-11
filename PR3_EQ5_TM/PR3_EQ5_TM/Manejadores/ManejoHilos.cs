@@ -22,6 +22,7 @@ namespace PR3_EQ5_TM.Manejadores
         Thread Lat2;
         Thread Lat3;
         Thread Lat4;
+        Thread PanelIndi;
         public ManejoHilos() 
         {
             frm = Application.OpenForms.OfType<Pantalla>().FirstOrDefault();
@@ -45,6 +46,9 @@ namespace PR3_EQ5_TM.Manejadores
             frm.btnInvert.Click += new EventHandler(btnInver_click);
             frm.btnPocas.Click += new EventHandler(btnPocas_click);
             frm.btnGenerar.Click += new EventHandler(SalirHilos);
+            
+
+            
         }
         // metodo que toma el evento form closing para abortar los hilos al cerrar el form por le usuario
         private void SalirHilos(object sender, EventArgs e)
@@ -93,6 +97,10 @@ namespace PR3_EQ5_TM.Manejadores
             {
                 Lat4.Abort();
             }
+        }
+        public void btnPanel_click(object sender, EventArgs e)
+        {
+            MessageBox.Show(frm.ListaGraficas.ListaGraficas1.Count.ToString());
         }
         public void btnInserción_Click(object sender, EventArgs e)
         {
