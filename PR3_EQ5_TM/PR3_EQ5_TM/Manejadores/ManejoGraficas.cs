@@ -89,6 +89,10 @@ namespace PR3_EQ5_TM.Manejadores
                     ListaGraficas[i].ActualizarDatos(gvl.PocasUnicas1);
                 }
 
+                ListaGraficas[i].CambioColor("Principal", frm.pnlColorPrincipal.BackColor);
+                ListaGraficas[i].CambioColor("Secundario", frm.PnlColorSecundario.BackColor);
+                ListaGraficas[i].BackColor = frm.pnlColorFondo.BackColor;
+
                 x += ListaGraficas[i].Width + 5;
                 frm.pnlGraficas.Controls.Add(ListaGraficas[i]);
             }

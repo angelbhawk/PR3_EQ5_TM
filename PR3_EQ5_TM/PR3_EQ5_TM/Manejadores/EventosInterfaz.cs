@@ -49,6 +49,7 @@ namespace PR3_EQ5_TM.Manejadores
             if (color2.ShowDialog() == DialogResult.OK)
             {
                 color = color2.Color;
+                frm.pnlColorPrincipal.BackColor = color;
                 for (int i = 0; i < 28; i++)
                     frm.ListaGraficas.ListaGraficas1[i].CambioColor("Principal", color);
             }
@@ -61,6 +62,7 @@ namespace PR3_EQ5_TM.Manejadores
             if (color2.ShowDialog() == DialogResult.OK)
             {
                 color = color2.Color;
+                frm.PnlColorSecundario.BackColor = color;
                 for (int i = 0; i < 28; i++)
                     frm.ListaGraficas.ListaGraficas1[i].CambioColor("Secundario", color);
             }
@@ -73,6 +75,7 @@ namespace PR3_EQ5_TM.Manejadores
             if (color2.ShowDialog() == DialogResult.OK)
             {
                 color = color2.Color;
+                frm.pnlColorFondo.BackColor = color;
                 for (int i = 0; i < 28; i++)
                     frm.ListaGraficas.ListaGraficas1[i].BackColor = color;
             }
