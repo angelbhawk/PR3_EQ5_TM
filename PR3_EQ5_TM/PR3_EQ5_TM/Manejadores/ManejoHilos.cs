@@ -292,15 +292,15 @@ namespace PR3_EQ5_TM.Manejadores
         }
         public void LatQuick(int i)
         {
-            frm.ListaGraficas.ListaGraficas[4 + i].Ordenar("Quicksort");
+            frm.ListaGraficas.ListaGraficas[6 + i].Ordenar("Quicksort");
         }
         public void LatMerge(int i)
         {
-            frm.ListaGraficas.ListaGraficas[5 + i].Ordenar("Merge");
+            frm.ListaGraficas.ListaGraficas[4 + i].Ordenar("Merge");
         }
         public void LatHeap(int i)
         {
-            frm.ListaGraficas.ListaGraficas[6 + i].Ordenar("Heap");
+            frm.ListaGraficas.ListaGraficas[5 + i].Ordenar("Heap");
         }
 
     }
